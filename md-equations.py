@@ -5,10 +5,8 @@ import re
 import shutil
 import os
 import pdf2image
-from time import sleep
-from PIL import Image
 
-# extract equation, convert to image
+# extract equation, convert to image and creates a duplicate file with the link of online images
 
 name = sys.argv[1].strip(".").strip("\\")
 
@@ -50,7 +48,5 @@ gh_raw_url = "https://raw.githubusercontent.com/henridb/medium-articles/master/"
 for index, line in enumerate(lines):
     lines[index] = re.sub("(resources/.*.png)", gh_raw_url+"\\1", line)
 
-print(lines)
-
-with open("tmp2.md", 'w') as file:
+with open("tmp.md", 'w') as file:
     file.writelines(lines)

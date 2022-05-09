@@ -13,8 +13,7 @@ python md-equations.py %name%
 git commit -am "article update"
 
 :: publish temp file to medium
-mdium publish %name%/tmp2.md
+mdium publish %name%/tmp.md
 
 :: delete temp file
 rem rm %name%/tmp.md
-rem rm %name%/tmp2.md
