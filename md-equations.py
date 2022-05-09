@@ -10,7 +10,7 @@ from PIL import Image
 
 # extract equation, convert to image
 
-name = sys.argv[1]
+name = sys.argv[1].strip(".").strip("\\")
 
 def create_image_from_latex(image_name,latex):
     if "rough" not in os.listdir():
@@ -45,7 +45,7 @@ with open("tmp.md", "w") as file:
 with open("tmp.md", 'r') as file:
     lines = file.readlines()
 
-gh_raw_url = "https://raw.githubusercontent.com/henridb/medium-articles/master/"
+gh_raw_url = "https://raw.githubusercontent.com/henridb/medium-articles/master/"+name+"/"
 
 for index, line in enumerate(lines):
     lines[index] = re.sub("(resources/.*.png)", gh_raw_url+"\\1", line)
