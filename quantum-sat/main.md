@@ -13,4 +13,4 @@ def testouille():
 	print("will it work ?")
 ```
 
-$$\alpha$$
+$$\alpha+\beta$$
