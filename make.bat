@@ -11,6 +11,7 @@ python md-equations.py %name%
 
 :: upload all images
 git commit -am "article update"
+git push
 
 :: publish temp file to medium
 mdium publish %name%/tmp.md
