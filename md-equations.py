@@ -64,8 +64,8 @@ for index, line in enumerate(lines):
         to_notebook("equation"+str(i), re.sub(r"\\",r"\\\\",line))
         # TODO: do something like this
         url = create_gist("equation"+str(i)+".ipynb")
-        # lines[index] = '<embed type="text/ipynb" src='+url+'>'
         lines[index] = '<script src="'+url+'"></script>'
+        lines[index] = '<embed type="text/x-python" src='+url+'>'
         i+=1
 
 with open("tmp.md", "w") as file:
