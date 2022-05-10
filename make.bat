@@ -18,4 +18,4 @@ git push
 mdium publish %name%/tmp.md
 
 :: delete temp file
-rem rm %name%/tmp.md
+rm %name%/tmp.md
