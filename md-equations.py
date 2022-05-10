@@ -5,6 +5,7 @@ import re
 import shutil
 import os
 import pdf2image
+import subprocess
 
 # extract equation, convert to image and creates a duplicate file with the link of online images
 
@@ -46,6 +47,13 @@ def to_notebook(image_name, latex):
         f.write(ipynb_header+latex+ipynb_footer)
 
 
+def create_gist(file_path):
+    output = subprocess.check_output(['gh', 'gist', 'create', 'resources/'+file_path])
+    # print("url: "+str(output)[2:-3])
+    # print(type(output))
+    return str(output)[2:-3]
+
+
 os.chdir(name)
 with open("main.md", 'r') as file:
     lines = file.readlines()
@@ -54,7 +62,10 @@ i=0
 for index, line in enumerate(lines):
     if line[:2] == "$$" == line[-2:]:
         to_notebook("equation"+str(i), re.sub(r"\\",r"\\\\",line))
-        lines[index] = '<embed type="text/ipynb" src="resources/equation'+str(i)+'.ipynb" width="300" height="200">'
+        # TODO: do something like this
+        url = create_gist("equation"+str(i)+".ipynb")
+        # lines[index] = '<embed type="text/ipynb" src='+url+'>'
+        lines[index] = '<script src="'+url+'"></script>'
         i+=1
 
 with open("tmp.md", "w") as file:
@@ -67,7 +78,7 @@ with open("tmp.md", 'r') as file:
 gh_raw_url = "https://raw.githubusercontent.com/henridb/medium-articles/master/"+name+"/"
 
 for index, line in enumerate(lines):
-    lines[index] = re.sub("(resources/.*.(png|ipynb))", gh_raw_url+"\\1", line)
+    lines[index] = re.sub("(resources/.*.png)", gh_raw_url+"\\1", line)
 
 with open("tmp.md", 'w') as file:
     file.writelines(lines)
