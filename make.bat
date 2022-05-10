@@ -10,9 +10,14 @@ set name=%1
 python md-equations.py %name%
 
 :: upload all images
-git add --all
-git commit -m "article update"
-git push
+rem git add --all
+rem git commit -m "article update"
+rem git push
+
+echo ...
+echo Waiting for the upload to be taken into account by ever systems
+echo ...
+timeout -T 10 -NOBREAK
 
 :: publish temp file to medium
 mdium publish %name%/tmp.md
