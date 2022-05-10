@@ -19,7 +19,7 @@ from tempfile import TemporaryDirectory
 from ctypes.util import find_library
 
 default_template = r"""
-\documentclass[{{ fontsize }}pt,preview]{standalone}
+\documentclass[{{ fontsize }}pt,preview,border=1pt]{standalone}
 {{ preamble }}
 \begin{document}
 \begin{preview}
