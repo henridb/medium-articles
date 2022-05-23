@@ -27,7 +27,7 @@ def create_image_from_latex(image_name,latex):
     os.chdir("rough")
     os.system("pdflatex a.tex")
     os.chdir("..")
-    image = pdf2image.convert_from_path("rough/a.pdf",size=(None,400),fmt="png")[0]
+    image = pdf2image.convert_from_path("rough/a.pdf",size=(None,200),fmt="png")[0]
     image.save("resources/"+image_name+".png", "PNG")
     shutil.rmtree("rough")
 
