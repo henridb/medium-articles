@@ -18,7 +18,7 @@ def create_image_from_latex(image_name,latex):
             "\\documentclass[border=1pt]{standalone}"+
             "\\usepackage{amsmath}\n"+
             "\\usepackage{varwidth}\n"+
-            "\\begin{document}\n\\begin{varwidth}{\\linewidth}$"+
+            "\\begin{document}\n\\begin{varwidth}{15cm}$"+
             latex+
             "$\\end{varwidth}\n\\end{document}"
         )
