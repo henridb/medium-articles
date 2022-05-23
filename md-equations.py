@@ -31,8 +31,9 @@ with open("main.md", 'r', encoding="utf8") as file:
 
 i=0
 for index, line in enumerate(lines):
+    print(index, line[:2], line[-3:1])
     if line[:2] == "$$" == line[-3:1]:
-        create_image_from_latex("equation"+str(i),line[2:-2])
+        create_image_from_latex("equation"+str(i),line[2:-3])
         lines[index] = '<img src="resources/equation'+str(i)+'.png" style="height:2em">'
         i+=1
 
