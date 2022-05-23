@@ -95,7 +95,7 @@ that can be disjointly true for the whole formula to be true. Finally,
 each literal is either a variable or the negation of a variable.
 Concretely, a CNF would look like the formula bellow.
 
-$$\bigwedge_{i=1}\^n \left(\bigvee_{j=1}^m l_{i,j}\right) \text{ where } l_{i,j}\in \{v_{i,j},\neg v_{i,j}\}$$
+$$\bigwedge_{i=1}^n \left(\bigvee_{j=1}^m l_{i,j}\right) \text{ where } l_{i,j}\in \{v_{i,j},\neg v_{i,j}\}$$
 
 The SAT problems being in the NP-complete complexity class, they are
 classically hard to solve. A brute-force search requires going through

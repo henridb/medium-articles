@@ -14,9 +14,13 @@ def create_image_from_latex(image_name,latex):
     if "rough" not in os.listdir():
         os.mkdir("rough")
     with open("rough/a.tex","w+") as f:
-        f.write("\\documentclass[border=1pt]{standalone}\n\\begin{document}\n$"+
-            latex+
-            "$\n\\end{document}")
+        f.write(
+            "\\documentclass[border=1pt]{standalone}"
+            "\\usepackage{amsmath}\n"
+            "\\begin{document}\n$"
+            latex
+            "$\n\\end{document}"
+        )
     os.chdir("rough")
     os.system("pdflatex a.tex")
     os.chdir("..")
@@ -31,8 +35,8 @@ with open("main.md", 'r', encoding="utf8") as file:
 
 i=0
 for index, line in enumerate(lines):
-    print(index, line[:2], line[-3:1])
-    if line[:2] == "$$" == line[-3:1]:
+    print(index, line[:2], line[-3:-1])
+    if line[:2] == "$$" == line[-3:-1]:
         create_image_from_latex("equation"+str(i),line[2:-3])
         lines[index] = '<img src="resources/equation'+str(i)+'.png" style="height:2em">'
         i+=1
