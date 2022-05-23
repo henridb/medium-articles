@@ -10,9 +10,9 @@ set name=%1
 python md-equations.py %name%
 
 :: upload all images
-rem git add --all
-rem git commit -m "article update"
-rem git push
+git add --all
+git commit -m "article update"
+git push
 
 echo ...
 echo Waiting for the upload to be taken into account by ever systems
