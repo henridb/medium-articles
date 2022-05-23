@@ -17,9 +17,10 @@ def create_image_from_latex(image_name,latex):
         f.write(
             "\\documentclass[border=1pt]{standalone}"+
             "\\usepackage{amsmath}\n"+
-            "\\begin{document}\n$"+
+            "\\usepackage{varwidth}\n"+
+            "\\begin{document}\n\\begin{varwidth}{\\linewidth}$"+
             latex+
-            "$\n\\end{document}"
+            "$\\end{varwidth}\n\\end{document}"
         )
     os.chdir("rough")
     os.system("pdflatex a.tex")
@@ -35,7 +36,6 @@ with open("main.md", 'r', encoding="utf8") as file:
 
 i=0
 for index, line in enumerate(lines):
-    print(index, line[:2], line[-3:-1])
     if line[:2] == "$$" == line[-3:-1]:
         create_image_from_latex("equation"+str(i),line[2:-3])
         lines[index] = '<img src="resources/equation'+str(i)+'.png" style="height:2em">'
