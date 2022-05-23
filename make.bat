@@ -23,4 +23,4 @@ timeout -T 10 -NOBREAK
 mdium publish %name%/tmp.md
 
 :: delete temp file
-rm %name%/tmp.md
+del %name%/tmp.md

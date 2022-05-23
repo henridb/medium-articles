@@ -40,3 +40,9 @@ then upload Markdown to Medium. The command to transform LaTex to Markdown using
 pandoc would look like `pandoc -s <your_file_name>.tex -o <your_file_name>.md`.
 
 Any help to improve this is apreceated!
+
+## Various notes
+
+Mdium (https://github.com/icyphox/mdium) as is doesn't
+support utf-8 character set, but adding `encoding="utf8"` on line 39 of the main
+script aliviates that problem.
