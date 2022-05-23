@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: SAT.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: alpha.bst
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+Database file #1: SAT.bib
+Warning--entry type for "Sta94" isn't style-file defined
+--line 330 of file SAT.bib
+Warning--empty institution in Jor21
+You've used 17 entries,
+            2543 wiz_defined-function locations,
+            687 strings with 7572 characters,
+and the built_in function-call counts, 7769 in all, are:
+= -- 794
+> -- 358
+< -- 13
++ -- 130
+- -- 125
+* -- 575
+:= -- 1235
+add.period$ -- 53
+call.type$ -- 17
+change.case$ -- 114
+chr.to.int$ -- 17
+cite$ -- 18
+duplicate$ -- 312
+empty$ -- 555
+format.name$ -- 146
+if$ -- 1617
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 14
+newline$ -- 87
+num.names$ -- 53
+pop$ -- 112
+preamble$ -- 1
+purify$ -- 130
+quote$ -- 0
+skip$ -- 270
+stack$ -- 0
+substring$ -- 463
+swap$ -- 77
+text.length$ -- 13
+text.prefix$ -- 6
+top$ -- 0
+type$ -- 136
+warning$ -- 1
+while$ -- 76
+width$ -- 22
+write$ -- 228
+(There were 2 warnings)

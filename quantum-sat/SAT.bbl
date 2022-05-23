@@ -1,0 +1,110 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{BCM{\etalchar{+}}20}
+
+\bibitem[Amb05]{Amb05}
+A.~Ambainis.
+\newblock Quantum search algorithms.
+\newblock {\em arXiv:quant-ph/0504012}, April 2005.
+
+\bibitem[BCCZ99]{BCCZ99}
+A.~Biere, A.~Cimatti, E.~Clarke, and Y.~Zhu.
+\newblock Symbolic {{Model Checking}} without {{BDDs}}.
+\newblock In W.R. Cleaveland, editor, {\em Tools and {{Algorithms}} for the
+  {{Construction}} and {{Analysis}} of {{Systems}}}, Lecture {{Notes}} in
+  {{Computer Science}}, pages 193--207, {Berlin, Heidelberg}, 1999. {Springer}.
+
+\bibitem[BCM{\etalchar{+}}20]{BCM+20}
+Z.~Bian, F.~Chudak, W.~Macready, A.~Roy, R.~Sebastiani, and S.~Varotti.
+\newblock Solving {{SAT}} (and {{MaxSAT}}) with a quantum annealer:
+  {{Foundations}}, encodings, and preliminary results.
+\newblock {\em Information and Computation}, 275:104609, December 2020.
+
+\bibitem[BFMP11]{BFMP11}
+F.~Bobot, J.-C. Filli{\^a}tre, C.~March{\'e}, and A.~Paskevich.
+\newblock Why3: {{Shepherd Your Herd}} of {{Provers}}.
+\newblock In {\em Boogie 2011: {{First International Workshop}} on
+  {{Intermediate Verification Languages}}}, page~53, 2011.
+
+\bibitem[CGW00]{CGW00}
+N.~J. Cerf, Lov~K. Grover, and Colin~P. Williams.
+\newblock Nested {{Quantum Search}} and {{NP-Hard Problems}}.
+\newblock {\em Applicable Algebra in Engineering, Communication and Computing},
+  10(4-5):311--338, May 2000.
+
+\bibitem[Coo71]{Coo71}
+S.~A. Cook.
+\newblock The complexity of theorem-proving procedures.
+\newblock In {\em Proceedings of the Third Annual {{ACM}} Symposium on
+  {{Theory}} of Computing}, {{STOC}} '71, pages 151--158, {New York, NY, USA},
+  May 1971. {Association for Computing Machinery}.
+
+\bibitem[dKM21]{dKM21}
+N.~{de Beaudrap}, A.~Kissinger, and K.~Meichanetzidis.
+\newblock Tensor {{Network Rewriting Strategies}} for {{Satisfiability}} and
+  {{Counting}}.
+\newblock {\em Electronic Proceedings in Theoretical Computer Science},
+  340:46--59, September 2021.
+
+\bibitem[DLL62]{DLL62}
+M.~Davis, G.~Logemann, and D.~Loveland.
+\newblock A machine program for theorem-proving.
+\newblock {\em Communications of the ACM}, 5(7):394--397, July 1962.
+
+\bibitem[Gro96]{Gro96}
+L.~K. Grover.
+\newblock A {{Fast Quantum Mechanical Algorithm}} for {{Database Search}}.
+\newblock In {\em Proceedings of the {{Twenty-eighth Annual ACM Symposium}} on
+  {{Theory}} of {{Computing}}}, {{STOC}} '96, pages 212--219, {New York, NY,
+  USA}, May 1996. {ACM}.
+
+\bibitem[Hin18]{Hin18}
+J.~Hines.
+\newblock Genomics {{Code Exceeds Exaops}} on {{Summit Supercomputer}}, June
+  2018.
+
+\bibitem[Jor21]{Jor21}
+S.~Jordan.
+\newblock Quantum {{Algorithm Zoo}}.
+\newblock Technical report, February 2021.
+
+\bibitem[LAK{\etalchar{+}}14]{LAK+14}
+Y.~Li, A.~Albarghouthi, Z.~Kincaid, A.~Gurfinkel, and M.~Chechik.
+\newblock Symbolic optimization with {{SMT}} solvers.
+\newblock In {\em Proceedings of the 41st {{ACM SIGPLAN-SIGACT Symposium}} on
+  {{Principles}} of {{Programming Languages}}}, pages 607--618, {San Diego
+  California USA}, January 2014. {ACM}.
+
+\bibitem[NSR02]{NSR02}
+G.-J. Nam, K.A. Sakallah, and R.A. Rutenbar.
+\newblock A new {{FPGA}} detailed routing approach via search-based {{Boolean}}
+  satisfiability.
+\newblock {\em IEEE Transactions on Computer-Aided Design of Integrated
+  Circuits and Systems}, 21(6):674--684, June 2002.
+
+\bibitem[PK00]{PK00}
+V.~Paruthi and A.~Kuehlmann.
+\newblock Equivalence checking combining a structural {{SAT-solver}}, {{BDDs}},
+  and simulation.
+\newblock In {\em Proceedings 2000 {{International Conference}} on {{Computer
+  Design}}}, pages 459--464, September 2000.
+
+\bibitem[SBS96]{SBS96}
+P.~Stephan, R.K. Brayton, and A.L. {Sangiovanni-Vincentelli}.
+\newblock Combinational test generation using satisfiability.
+\newblock {\em IEEE Transactions on Computer-Aided Design of Integrated
+  Circuits and Systems}, 15(9):1167--1176, September 1996.
+
+\bibitem[Sta94]{Sta94}
+G.~Stalmarck.
+\newblock System for determining propositional logic theorems by applying
+  values and rules to triplets that are generated from boolean formula, January
+  1994.
+
+\bibitem[TID20]{TID20}
+M.~Trimoska, S.~Ionica, and G.~Dequen.
+\newblock A {{SAT-Based Approach}} for {{Index Calculus}} on {{Binary Elliptic
+  Curves}}.
+\newblock In {\em Progress in {{Cryptology}} - {{AFRICACRYPT}} 2020}, pages
+  214--235, {Cairo, Egypt}, July 2020.
+
+\end{thebibliography}
