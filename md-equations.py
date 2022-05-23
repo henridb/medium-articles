@@ -15,17 +15,19 @@ def create_image_from_latex(image_name,latex):
         os.mkdir("rough")
     with open("rough/a.tex","w+") as f:
         f.write(
-            "\\documentclass[border=1pt]{standalone}"+
+            "\\documentclass[tikz,border=1pt]{standalone}"+
             "\\usepackage{amsmath}\n"+
-            "\\usepackage{varwidth}\n"+
-            "\\begin{document}\n\\begin{varwidth}{15cm}$"+
-            latex+
-            "$\\end{varwidth}\n\\end{document}"
+            "\\begin{document}\n"+
+            "\\begin{tikzpicture}"+
+                "\\draw[white] (-5,0) -- (5,0);"+
+                "\\node at (0,0) {$"+latex+"$};"+
+            "\\end{tikzpicture}\n"+
+            "\\end{document}"
         )
     os.chdir("rough")
     os.system("pdflatex a.tex")
     os.chdir("..")
-    image = pdf2image.convert_from_path("rough/a.pdf",size=(None,30),fmt="png")[0]
+    image = pdf2image.convert_from_path("rough/a.pdf",size=(None,200),fmt="png")[0]
     image.save("resources/"+image_name+".png", "PNG")
     shutil.rmtree("rough")
 
