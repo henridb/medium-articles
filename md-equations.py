@@ -15,10 +15,10 @@ def create_image_from_latex(image_name,latex):
         os.mkdir("rough")
     with open("rough/a.tex","w+") as f:
         f.write(
-            "\\documentclass[border=1pt]{standalone}"
-            "\\usepackage{amsmath}\n"
-            "\\begin{document}\n$"
-            latex
+            "\\documentclass[border=1pt]{standalone}"+
+            "\\usepackage{amsmath}\n"+
+            "\\begin{document}\n$"+
+            latex+
             "$\n\\end{document}"
         )
     os.chdir("rough")
