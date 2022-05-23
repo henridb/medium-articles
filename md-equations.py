@@ -26,7 +26,7 @@ def create_image_from_latex(image_name,latex):
 
 
 os.chdir(name)
-with open("main.md", 'r') as file:
+with open("main.md", 'r', encoding="utf8") as file:
     lines = file.readlines()
 
 i=0
@@ -36,11 +36,11 @@ for index, line in enumerate(lines):
         lines[index] = '<img src="resources/equation'+str(i)+'.png" style="height:2em">'
         i+=1
 
-with open("tmp.md", "w") as file:
+with open("tmp.md", "w", encoding="utf8") as file:
     file.writelines(lines)
 
 
-with open("tmp.md", 'r') as file:
+with open("tmp.md", 'r', encoding="utf8") as file:
     lines = file.readlines()
 
 gh_raw_url = "https://raw.githubusercontent.com/henridb/medium-articles/master/"+name+"/"
@@ -48,5 +48,5 @@ gh_raw_url = "https://raw.githubusercontent.com/henridb/medium-articles/master/"
 for index, line in enumerate(lines):
     lines[index] = re.sub("(resources/.*.png)", gh_raw_url+"\\1", line)
 
-with open("tmp.md", 'w') as file:
+with open("tmp.md", 'w', encoding="utf8") as file:
     file.writelines(lines)
