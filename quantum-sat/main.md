@@ -20,7 +20,7 @@ abstract: |
   of our grand plan: building a platform for companies to use **QC**
   without needing the deep technical knowledge usually required. Such
   use-cases were previously established: a Navier-Stokes equation
-  solver, an optimizer, a compiler, *etc\...* I will here present an
+  solver, an optimizer, a compiler, *etc...* I will here present an
   idea of quantum SAT solver, using the power of superposition in order
   to find solution to systems of boolean equations.
 tags: ['SAT', 'Quantum computing']
@@ -97,7 +97,7 @@ classically hard to solve. A brute-force search requires going through
 *2^n* elements, if there are *n* variables. Since there are often around
 *10^3* variables for this king of problems, *2^{1000}* solutions need to
 be examined. With current rate of computing (exascale, *10^{18}*
-operations per second [Hin18]), this would take around *10^{275}*
+operations per second [Hin18]), this would take around *10²⁷⁵*
 years. Using a quantum search algorithm may transform these questions
 from completely impossible to possible.
 
@@ -105,7 +105,7 @@ from completely impossible to possible.
 
 As they often are, this previous short presentation of a complex subject
 was a bit reductive. Indeed, as said previously, SAT solvers are used in
-day to day life, so SAT problems are solvable in less that *10^{275}*
+day to day life, so SAT problems are solvable in less that *10²⁷⁵*
 years. Smarter than brute-force solutions exist, they are not guarantied
 to finish in a reasonable time so they are most often equipped with a
 timeout kill switch. These solvers are estimated to solve a problem in a
@@ -113,7 +113,7 @@ time in *O(1.329...^n)*.
 
 In comparison, if we manage to create an oracle for this problem, we
 could use Grover's algorithm [Gro96] to solve it with a complexity in
-*O(√{N})=O(1.41...^n)* (the system has *n* qubits and *N=2^n* 
+*O(√N)=O(1.41...^n)* (the system has *n* qubits and *N=2^n* 
 base states). And here is the first speed bump, as discussed in [Amb05],
 Grover's algorithm alone in not sufficient to leverage a quantum advantage over
 the already existing algorithms that are cores to SAT solvers. This is
@@ -141,45 +141,45 @@ simplify SAT formulas [dKM21]. This may be an interesting lead as it
 means that SAT formulas may be encoded as quantum circuits, but how to
 use those circuits to solve the SAT problems is left to be determined.
 
-[Amb05] A. Ambainis. *Quantum search algorithms.* arXiv:quant-ph/0504012, 2005. <br>
-[BCCZ99] A. Biere, A. Cimatti, E. Clarke, and Y. Zhu. *Symbolic Model Checking without BDDs.* In W.R.
+**[Amb05]** A. Ambainis. *Quantum search algorithms.* arXiv:quant-ph/0504012, 2005. <br>
+**[BCCZ99]** A. Biere, A. Cimatti, E. Clarke, and Y. Zhu. *Symbolic Model Checking without BDDs.* In W.R.
 Cleaveland, editor, Tools and Algorithms for the Construction and Analysis of Systems, Lecture
 Notes in Computer Science, pages 193–207, Berlin, Heidelberg, 1999. Springer.<br>
 [BCM+20] Z. Bian, F. Chudak, W. Macready, A. Roy, R. Sebastiani, and S. Varotti.
 *Solving SAT (and MaxSAT) with a quantum annealer: Foundations, encodings, and
  preliminary results.* Information and Computation, 275:104609, 2020.<br>
-[BFMP11] F. Bobot, J.-C. Filliâtre, C. Marché, and A. Paskevich. *Why3: Shepherd
+**[BFMP11]** F. Bobot, J.-C. Filliâtre, C. Marché, and A. Paskevich. *Why3: Shepherd
 Your Herd of Provers.* In Boogie 2011: First International Workshop on
 Intermediate Verification Languages, page 53, 2011.<br>
-[CGW00] N. J. Cerf, Lov K. Grover, and Colin P. Williams. *Nested Quantum Search and NP-Hard Problems.*
+**[CGW00]** N. J. Cerf, Lov K. Grover, and Colin P. Williams. *Nested Quantum Search and NP-Hard Problems.*
 Applicable Algebra in Engineering, Communication and Computing, 10(4–5):311–338, 2000.<br>
-[Coo71] S. A. Cook. *The complexity of theorem-proving procedures.* In Proceedings of the Third Annual
+**[Coo71]** S. A. Cook. *The complexity of theorem-proving procedures.* In Proceedings of the Third Annual
 ACM Symposium on Theory of Computing, STOC '71, pages 151–158, New York, NY, USA, May
 1971. Association for Computing Machinery.<br>
-[dKM21] N. de Beaudrap, A. Kissinger, and K. Meichanetzidis. *Tensor Network Rewriting Strategies for
+**[dKM21]** N. de Beaudrap, A. Kissinger, and K. Meichanetzidis. *Tensor Network Rewriting Strategies for
 Satisfiability and Counting.* Electronic Proceedings in Theoretical Computer
 Science, 340:46–59, 2021.<br>
-[DLL62] M. Davis, G. Logemann, and D. Loveland. *A machine program for theorem-proving.* Communica-
+**[DLL62]** M. Davis, G. Logemann, and D. Loveland. *A machine program for theorem-proving.* Communica-
 tions of the ACM, 5(7):394–397, 1962.<br>
-[Gro96] L. K. Grover. *A Fast Quantum Mechanical Algorithm for Database Search.* In Proceedings of the
+**[Gro96]** L. K. Grover. *A Fast Quantum Mechanical Algorithm for Database Search.* In Proceedings of the
 Twenty-eighth Annual ACM Symposium on Theory of Computing, STOC '96, pages 212–219, New
 York, NY, USA, 1996. ACM.<br>
-[Hin18] J. Hines. *Genomics Code Exceeds Exaops on Summit Supercomputer*, 2018.<br>
-[Jor21] S. Jordan. Quantum Algorithm Zoo. Technical report, 2021.<br>
+**[Hin18]** J. Hines. *Genomics Code Exceeds Exaops on Summit Supercomputer*, 2018.<br>
+**[Jor21]** S. Jordan. Quantum Algorithm Zoo. Technical report, 2021.<br>
 [LAK+14] Y. Li, A. Albarghouthi, Z. Kincaid, A. Gurfinkel, and M. Chechik. *Symbolic optimization with
 SMT solvers.* In Proceedings of the 41st ACM SIGPLAN-SIGACT Symposium on Principles of
 Programming Languages, pages 607–618, San Diego California USA, 2014. ACM.<br>
-[NSR02] G.-J. Nam, K.A. Sakallah, and R.A. Rutenbar. *A new FPGA detailed routing 
+**[NSR02]** G.-J. Nam, K.A. Sakallah, and R.A. Rutenbar. *A new FPGA detailed routing 
 approach via search-based Boolean satisfiability.* IEEE Transactions on Computer-Aided Design of Integrated Circuits
 and Systems, 21(6):674–684, 2002.<br>
-[PK00] V. Paruthi and A. Kuehlmann. *Equivalence checking combining a structural SAT-solver, BDDs,
+**[PK00]** V. Paruthi and A. Kuehlmann. *Equivalence checking combining a structural SAT-solver, BDDs,
 and simulation.* In Proceedings 2000 International Conference on Computer Design, pages 459–464,
 2000.<br>
-[SBS96] P. Stephan, R.K. Brayton, and A.L. Sangiovanni-Vincentelli. *Combinational test generation using
+**[SBS96]** P. Stephan, R.K. Brayton, and A.L. Sangiovanni-Vincentelli. *Combinational test generation using
 satisfiability.* IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems,
 15(9):1167–1176, 1996.<br>
-[Sta94] G. Stalmarck. *System for determining propositional logic theorems by applying values and rules to
+**[Sta94]** G. Stalmarck. *System for determining propositional logic theorems by applying values and rules to
 triplets that are generated from boolean formula*, 1994.<br>
-[TID20] M. Trimoska, S. Ionica, and G. Dequen. *A SAT-Based Approach for Index Calculus on Binary
+**[TID20]** M. Trimoska, S. Ionica, and G. Dequen. *A SAT-Based Approach for Index Calculus on Binary
 Elliptic Curves.* In Progress in Cryptology-AFRICACRYPT 2020, pages 214–235,
 Cairo, Egypt, 2020.

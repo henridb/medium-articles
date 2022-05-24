@@ -34,6 +34,10 @@ supported on Medium, this is not really my fault ^^". Other features could be
 added latter on, such as GitHub gists for code snippet, support for tables,
 etc...
 
+For now, complex formulas are not inlined, and simple ones are simply italized
+and left in LaTeX format in the Markdown. The problem is then solved using the
+`TeX to Unicode` extention, in the Medium editor.
+
 Finally, it may even be preferable to write your articles in LaTeX, a pipeline
 could be created, using the software pandoc: to transform LaTex to Markdown, and
 then upload Markdown to Medium. The command to transform LaTex to Markdown using
