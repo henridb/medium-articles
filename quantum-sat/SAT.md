@@ -127,10 +127,9 @@ time in $O(1.329\ldots^n)$.
 
 In comparison, if we manage to create an oracle for this problem, we
 could use Grover's algorithm [@Gro96] to solve it with a complexity in
-$O(\sqrt{N})=O
-(1.41\ldots^n)$ (the system has $n$ qubits and $N=2^n$ base states). And
-here is the first speed bump, as discussed in [@Amb05], Grover's
-algorithm alone in not sufficient to leverage a quantum advantage over
+$O(\sqrt{N})=O(1.41\ldots^n)$ (the system has $n$ qubits and $N=2^n$ 
+base states). And here is the first speed bump, as discussed in [@Amb05],
+Grover's algorithm alone in not sufficient to leverage a quantum advantage over
 the already existing algorithms that are cores to SAT solvers. This is
 not the end of the line though, by combining the current classical
 algorithms with Grover's, we could obtain a quadratic acceleration,

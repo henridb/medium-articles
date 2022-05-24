@@ -48,19 +48,14 @@ Most discrete optimization problems can be encoded as SAT problems,
 which make the SAT solvers extremely useful tools. Here are some example
 of areas where SAT solvers are used:
 
--   automated testing (model checking), for software but not only
-    [SBS96; BCCZ99];
-
--   automated/semi-automated theorem proving and formal software
-    verification [DLL62; Sta94; BFMP11];
-
--   Electrical Design Automation (EDA):
-    -   formal equivalence checking [PK00];
-    -   FPGA routing [NSR02];
-
--   cryptoanalysis [TID20];
-
--   various discrete optimization problems [LAK+14].
+- automated testing (model checking), for software but not only
+  [SBS96; BCCZ99];
+- automated/semi-automated theorem proving and formal software
+  verification [DLL62; Sta94; BFMP11];
+- Electrical Design Automation (EDA): formal equivalence checking [PK00] or
+  FPGA routing [NSR02];
+-  cryptoanalysis [TID20];
+-  various discrete optimization problems [LAK+14].
 
 These problems are usually huge in term of number of variables and
 formula size, which implies an important need of efficient solvers.
@@ -99,33 +94,32 @@ $$\bigwedge_{i=1}^n \left(\bigvee_{j=1}^m l_{i,j}\right) \text{ where } l_{i,j}\
 
 The SAT problems being in the NP-complete complexity class, they are
 classically hard to solve. A brute-force search requires going through
-*2ⁿ* elements, if there are *n* variables. Since there are often around
-*10³* variables for this king of problems, *2¹⁰⁰⁰* solutions need to
-be examined. With current rate of computing (exascale, *10¹⁸*
-operations per second [Hin18]), this would take around *10²⁷⁵*
+*2^n* elements, if there are *n* variables. Since there are often around
+*10^3* variables for this king of problems, *2^{1000}* solutions need to
+be examined. With current rate of computing (exascale, *10^{18}*
+operations per second [@Hin18]), this would take around *10^{275}*
 years. Using a quantum search algorithm may transform these questions
 from completely impossible to possible.
 
-# The known the plan and the promising
+# What: The known the plan and the promising {#sec:the_known_the_plan_and_the_promising}
 
 As they often are, this previous short presentation of a complex subject
 was a bit reductive. Indeed, as said previously, SAT solvers are used in
-day to day life, so SAT problems are solvable in less that *10²⁷⁵*
+day to day life, so SAT problems are solvable in less that *10^{275}*
 years. Smarter than brute-force solutions exist, they are not guarantied
 to finish in a reasonable time so they are most often equipped with a
 timeout kill switch. These solvers are estimated to solve a problem in a
-time in *O(1.329...ⁿ)*.
+time in *O(1.329\ldots^n)*.
 
 In comparison, if we manage to create an oracle for this problem, we
-could use Grover's algorithm [Gro96] to solve it with a complexity in
-*O(√N)=O(1.41...ⁿ)* (the system has *n* qubits and *N=2ⁿ* base states).
-And
-here is the first speed bump, as discussed in [Amb05], Grover's
-algorithm alone in not sufficient to leverage a quantum advantage over
+could use Grover's algorithm [@Gro96] to solve it with a complexity in
+*O(\sqrt{N})=O(1.41\ldots^n)* (the system has *n* qubits and *N=2^n* 
+base states). And here is the first speed bump, as discussed in [@Amb05],
+Grover's algorithm alone in not sufficient to leverage a quantum advantage over
 the already existing algorithms that are cores to SAT solvers. This is
 not the end of the line though, by combining the current classical
 algorithms with Grover's, we could obtain a quadratic acceleration,
-having a complexity in *O(1.153...ⁿ)*.
+having a complexity in *O(1.153\ldots^n)*.
 
 Other leads have also been explored: by nesting quantum search, Cerf *et
 al.* managed to gain an exponential speedup [CGW00], and by using a
