@@ -1,7 +1,7 @@
 :: The medium article should be in a folder (called `name`) and be called 
 :: main.md. Images should be placed in a resources subfolder.
 
-rem @ECHO OFF
+@ECHO OFF
 
 set name=%1
 

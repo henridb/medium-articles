@@ -97,11 +97,11 @@ classically hard to solve. A brute-force search requires going through
 *2^n* elements, if there are *n* variables. Since there are often around
 *10^3* variables for this king of problems, *2^{1000}* solutions need to
 be examined. With current rate of computing (exascale, *10^{18}*
-operations per second [@Hin18]), this would take around *10^{275}*
+operations per second [Hin18]), this would take around *10^{275}*
 years. Using a quantum search algorithm may transform these questions
 from completely impossible to possible.
 
-# What: The known the plan and the promising {#sec:the_known_the_plan_and_the_promising}
+# The known the plan and the promising
 
 As they often are, this previous short presentation of a complex subject
 was a bit reductive. Indeed, as said previously, SAT solvers are used in
@@ -109,17 +109,17 @@ day to day life, so SAT problems are solvable in less that *10^{275}*
 years. Smarter than brute-force solutions exist, they are not guarantied
 to finish in a reasonable time so they are most often equipped with a
 timeout kill switch. These solvers are estimated to solve a problem in a
-time in *O(1.329\ldots^n)*.
+time in *O(1.329...^n)*.
 
 In comparison, if we manage to create an oracle for this problem, we
-could use Grover's algorithm [@Gro96] to solve it with a complexity in
-*O(\sqrt{N})=O(1.41\ldots^n)* (the system has *n* qubits and *N=2^n* 
-base states). And here is the first speed bump, as discussed in [@Amb05],
+could use Grover's algorithm [Gro96] to solve it with a complexity in
+*O(√{N})=O(1.41...^n)* (the system has *n* qubits and *N=2^n* 
+base states). And here is the first speed bump, as discussed in [Amb05],
 Grover's algorithm alone in not sufficient to leverage a quantum advantage over
 the already existing algorithms that are cores to SAT solvers. This is
 not the end of the line though, by combining the current classical
 algorithms with Grover's, we could obtain a quadratic acceleration,
-having a complexity in *O(1.153\ldots^n)*.
+having a complexity in *O(1.153...^n)*.
 
 Other leads have also been explored: by nesting quantum search, Cerf *et
 al.* managed to gain an exponential speedup [CGW00], and by using a
