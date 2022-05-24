@@ -34,9 +34,16 @@ supported on Medium, this is not really my fault ^^". Other features could be
 added latter on, such as GitHub gists for code snippet, support for tables,
 etc...
 
-For now, complex formulas are not inlined, and simple ones are simply italized
-and left in LaTeX format in the Markdown. The problem is then solved using the
-`TeX to Unicode` extention, in the Medium editor.
+For now, complex formulas are not inlined, and simple ones will simply be
+written using Unicode characters. Most of the equations is left in the LaTeX
+format in the Markdown file, and tThe problem is then solved using the
+`TeX to Unicode` extention, in the Medium editor. It has to be done in the Medium
+editor because the Medium Markdown parser handles poorly Unicode exponents: if
+Unicode exponents are in the markdown, the result will be quite random... But
+even this solution is not perfect, because the extention can't handle "complex"
+symbols, for example `\sqrt` and `\ldots` are not supported. To handle those, a
+TeX to Unicode plugin is used in my IDE... (It's a shitty solution, I know, I
+work with the limitation of the tools I have to use :/)
 
 Finally, it may even be preferable to write your articles in LaTeX, a pipeline
 could be created, using the software pandoc: to transform LaTex to Markdown, and

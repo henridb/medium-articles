@@ -97,7 +97,7 @@ classically hard to solve. A brute-force search requires going through
 *2^n* elements, if there are *n* variables. Since there are often around
 *10^3* variables for this king of problems, *2^{1000}* solutions need to
 be examined. With current rate of computing (exascale, *10^{18}*
-operations per second [Hin18]), this would take around *10²⁷⁵*
+operations per second [Hin18]), this would take around *10^{275}*
 years. Using a quantum search algorithm may transform these questions
 from completely impossible to possible.
 
@@ -105,7 +105,7 @@ from completely impossible to possible.
 
 As they often are, this previous short presentation of a complex subject
 was a bit reductive. Indeed, as said previously, SAT solvers are used in
-day to day life, so SAT problems are solvable in less that *10²⁷⁵*
+day to day life, so SAT problems are solvable in less that *10^{275}*
 years. Smarter than brute-force solutions exist, they are not guarantied
 to finish in a reasonable time so they are most often equipped with a
 timeout kill switch. These solvers are estimated to solve a problem in a
