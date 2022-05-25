@@ -36,8 +36,8 @@ everyday (conscientiously or not), discrete problems are omnipresent.
 This is why I chose to focus on those in this article. In particular, on
 a specific class of those problems called SAT problems.
 
-SAT or boolean SATisfiability problems are problems encoded as a logic
-formula, and they enable the solving of many other discrete problems.
+SAT or boolean SATisfiability problems are problems encoded as logic
+formulas, and they enable the solving of many other discrete problems.
 First of all, SAT is a very complex problem to solve (called a
 NP-complete problem) [Coo71], which makes it a great theoretical study
 subject to analyze fundamental notions concerning quantum advantage (in
@@ -62,9 +62,6 @@ formula size, which implies an important need of efficient solvers.
 
 Solving more efficiently those problems using quantum computing would
 then enable us to use the quantum advantage for many discrete problems.
-We could then sell our quantum SAT solver or use the SaaS approach and
-sell our expertise by helping companies to efficiently solve their
-discrete problems using quantum computers.
 
 # Good candidates for quantum computing
 
@@ -74,19 +71,20 @@ over classical computing. Many theoretical example examples have already
 been exhibited (more than 400 references split into more that 60
 categories of algorithms centralized in the quantum algorithm zoo
 [Jor21]), some of them have been run on quantum processors, but the
-real promise is still just that: a promise. Indeed, the the nature of
+real promise is still just that: a promise. Indeed, because of the nature of
 complexity comparison, the quantum advantage only gets bigger as the
-size of the systems grow. This is the reason why SAT problems are such
+size of the systems grows. This is the reason why SAT problems are such
 good candidate: the real life example are typically using several
 thousand of variables and exponentially more clauses. They are easy to
 check but because of the number of variables, it is extremely long to
-brute-force the solution.
+brute-force a solution.
 
 A SAT problem is most often given as a logic formula in the Conjunctive
 Normal Form (CNF). A CNF is conjunction of clauses, *i.e.* a set of
-clauses that must all be true conjointly (at the same time) for the.
+clauses that must all be true conjointly (at the same time) for the whole
+formula to be true for some value of the variables (we say satisfiable).
 These clauses are themselves disjunction of literals, sets of literals
-that can be disjointly true for the whole formula to be true. Finally,
+that can be disjointly true for the clause to be true. Finally,
 each literal is either a variable or the negation of a variable.
 Concretely, a CNF would look like the formula bellow.
 
@@ -99,9 +97,18 @@ classically hard to solve. A brute-force search requires going through
 be examined. With current rate of computing (exascale, *10^{18}*
 operations per second [Hin18]), this would take around *10^{275}*
 years. Using a quantum search algorithm may transform these questions
-from completely impossible to possible.
+from unthinkable to possible.
 
-# The known the plan and the promising
+<!-- Note that this time is an estimation for the run time of a naive solution, but a
+very active research is taking place into finding efficient ways to solve SAT
+problems, so you may find algorithms able to find solutions in reasonable time.
+But for now (and for the foreseeable future), no such algorithm will find
+solutions with a 100% probability: current algorithms have no guarantees to
+terminate in a reasonable time. -->
+
+# The known, the plan, and the promising
+
+![](resources/GoodBadUgly_stare.png)
 
 As they often are, this previous short presentation of a complex subject
 was a bit reductive. Indeed, as said previously, SAT solvers are used in
