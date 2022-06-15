@@ -29,19 +29,26 @@ status: draft
 
 # Solving problems with SAT
 
-Problem solving is a cornerstone of our society. Improving processes
-should not be a end in itself, but it is definitely a mean to improve
-the lives of each of us. Amongst the problems we are confronted to
-everyday (conscientiously or not), discrete problems are omnipresent.
-The present article is on a specific class of those problems called SAT problems.
+Problem solving is a cornerstone of our society as it allows us to create complex
+processes that make our lives easier. Improving those processes should probably
+not be a end in itself (efficiency for the beauty of efficiency), but better
+processes may lead to positive outcomes (efficiency for reduced energy
+consumption, simpler processes to understand, etc...). Amongst the problems we
+are confronted to everyday (conscientiously or not), discrete problems are
+omnipresent. The present article is on a specific class of those problems called
+SAT problems.
 
-SAT or boolean SATisfiability problems are problems encoded as logic
-formulas, and they enable the solving of many other discrete problems.
-First of all, SAT is a very complex problem to solve (called a
-NP-complete problem) [Coo71], which makes it a great theoretical study
-subject to analyze fundamental notions concerning quantum advantage (in
-particular the likely differences between the P, NP and quantum
-equivalent classes of complexity). But they are much more than that.
+SAT or boolean SATisfiability problems are problems encoded as logic formulas.
+The goal is to find a value for the variables of the formula such that it
+evaluates to *True*. We say that those values *satisfy* the formula, and when
+such a set exist, the sormula is *satifiable* (it is not always the case!).
+Having the ability to solve SAT problems also enable the solving of many other
+discrete problems. When loogking for a reason to wan to solve SAT problems,
+we can first see that SAT is a very complex problem to solve (called a
+NP-complete problem) [Coo71], which makes it a great theoretical study subject
+to analyze fundamental notions concerning quantum advantage (in particular the
+likely differences between the P, NP and quantum equivalent classes of
+complexity). But they are much more than that.
 
 Most discrete optimization problems can be encoded as SAT problems,
 which make the SAT solvers extremely useful tools. Here are some example
@@ -96,13 +103,6 @@ be examined. With current rate of computing (exascale, *10^{18}*
 operations per second [Hin18]), this would take around *10^{275}*
 years. Using a quantum search algorithm may transform these questions
 from unthinkable to possible.
-
-<!-- Note that this time is an estimation for the run time of a naive solution, but a
-very active research is taking place into finding efficient ways to solve SAT
-problems, so you may find algorithms able to find solutions in reasonable time.
-But for now (and for the foreseeable future), no such algorithm will find
-solutions with a 100% probability: current algorithms have no guarantees to
-terminate in a reasonable time. -->
 
 # The known, the plan, and the promising
 
