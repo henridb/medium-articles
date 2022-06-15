@@ -33,8 +33,7 @@ Problem solving is a cornerstone of our society. Improving processes
 should not be a end in itself, but it is definitely a mean to improve
 the lives of each of us. Amongst the problems we are confronted to
 everyday (conscientiously or not), discrete problems are omnipresent.
-This is why I chose to focus on those in this article. In particular, on
-a specific class of those problems called SAT problems.
+The present article is on a specific class of those problems called SAT problems.
 
 SAT or boolean SATisfiability problems are problems encoded as logic
 formulas, and they enable the solving of many other discrete problems.
@@ -54,8 +53,8 @@ of areas where SAT solvers are used:
   verification [DLL62; Sta94; BFMP11];
 - Electrical Design Automation (EDA): formal equivalence checking [PK00] or
   FPGA routing [NSR02];
--  cryptoanalysis [TID20];
--  various discrete optimization problems [LAK+14].
+- cryptoanalysis [TID20];
+- various discrete optimization problems [LAK+14].
 
 These problems are usually huge in term of number of variables and
 formula size, which implies an important need of efficient solvers.
@@ -65,19 +64,18 @@ then enable us to use the quantum advantage for many discrete problems.
 
 # Good candidates for quantum computing
 
-SAT problems are especially interesting because of the huge size of the
-problems. Indeed, **QC** is all about gaining a complexity advantage
-over classical computing. Many theoretical example examples have already
-been exhibited (more than 400 references split into more that 60
-categories of algorithms centralized in the quantum algorithm zoo
-[Jor21]), some of them have been run on quantum processors, but the
-real promise is still just that: a promise. Indeed, because of the nature of
-complexity comparison, the quantum advantage only gets bigger as the
-size of the systems grows. This is the reason why SAT problems are such
-good candidate: the real life example are typically using several
-thousand of variables and exponentially more clauses. They are easy to
-check but because of the number of variables, it is extremely long to
-brute-force a solution.
+Many theoretical algorithms have already been exhibited(more than 400 references
+split into more that 60 categories of algorithms centralized in the quantum
+algorithm zoo [Jor21]), some of them have been run on quantum processors, but
+the real promise of breakthrough results thanks to quantum computing is still
+just that: a promise. In this context, SAT problems are especially interesting
+because of the huge size of the problems. Indeed, quantum computing is all about
+gaining a complexity advantage over classical computing: because of the nature
+of complexity comparison, the quantum advantage only gets bigger as the size of
+the systems grows. This is the reason why SAT problems are such good candidate:
+the real life example are typically using several thousand of variables and
+exponentially more clauses. They are easy to check but because of the number of
+variables, it is extremely long to brute-force a solution.
 
 A SAT problem is most often given as a logic formula in the Conjunctive
 Normal Form (CNF). A CNF is conjunction of clauses, *i.e.* a set of
@@ -93,7 +91,7 @@ $$\bigwedge_{i=1}^n \left(\bigvee_{j=1}^m l_{i,j}\right) \text{ where } l_{i,j}\
 The SAT problems being in the NP-complete complexity class, they are
 classically hard to solve. A brute-force search requires going through
 *2^n* elements, if there are *n* variables. Since there are often around
-*10^3* variables for this king of problems, *2^{1000}* solutions need to
+*10^3* variables for this kind of problems, *2^{1000}* solutions need to
 be examined. With current rate of computing (exascale, *10^{18}*
 operations per second [Hin18]), this would take around *10^{275}*
 years. Using a quantum search algorithm may transform these questions
@@ -110,43 +108,43 @@ terminate in a reasonable time. -->
 
 ![](resources/GoodBadUgly_stare.png)
 
-As they often are, this previous short presentation of a complex subject
-was a bit reductive. Indeed, as said previously, SAT solvers are used in
-day to day life, so SAT problems are solvable in less that *10^{275}*
-years. Smarter than brute-force solutions exist, they are not guarantied
-to finish in a reasonable time so they are most often equipped with a
-timeout kill switch. These solvers are estimated to solve a problem in a
-time in *O(1.329...^n)*.
+As they often are, this previous short presentation of a complex subject was a
+bit reductive. Indeed, as said previously, SAT solvers are used in day to day
+life, so naturally, SAT problems are solvable in less that *10^{275}* years.
+Smarter than brute-force solutions exist, they are not guarantied to finish in a
+reasonable time so they are most often equipped with a timeout kill switch.
+These solvers are estimated to solve a problem in a time in *O(1.329...^n)* (a
+short heads up: complexity theory is used a lot to evaluate quantum advantage,
+if you are not familiar with it, a good place to start is 
+[[this]](https://en.wikipedia.org/wiki/Computational_complexity_theory#Complexity_measures)
+section of the corresponding Wikipedia article).
 
 In comparison, if we manage to create an oracle for this problem, we
 could use Grover's algorithm [Gro96] to solve it with a complexity in
-*O(√N)=O(1.41...^n)* (the system has *n* qubits and *N=2^n* 
-base states). And here is the first speed bump, as discussed in [Amb05],
-Grover's algorithm alone in not sufficient to leverage a quantum advantage over
-the already existing algorithms that are cores to SAT solvers. This is
-not the end of the line though, by combining the current classical
-algorithms with Grover's, we could obtain a quadratic acceleration,
-having a complexity in *O(1.153...^n)*.
+*O(√N)=O(1.41...^n)* (the quantum circuit running the algorithm has *n* qubits
+and *N=2^n* base states). And here is the first speed bump, as discussed in
+[Amb05], Grover's algorithm alone in not sufficient to leverage a quantum
+advantage over the already existing algorithms that are cores to SAT solvers.
+This is not the end of the line though, by combining the current classical
+algorithms with Grover's, we could obtain a quadratic acceleration, having a
+complexity in *O(1.153...^n)*.
 
-Other leads have also been explored: by nesting quantum search, Cerf *et
-al.* managed to gain an exponential speedup [CGW00], and by using a
-very different method all together, Bian *et al.* manages to really
-recently use a Quantum Annealer to explore the space of possibilities by
-encoding the problem as an *Izing model* characterizing the quantum
-annealer [BCM+20].
+Other leads have also been explored: by nesting quantum search, Cerf *et al.*
+managed to gain an exponential speedup [CGW00], and by using a very different
+method all together, Bian *et al.* managed really recently to use a Quantum
+Annealer to explore the space of possibilities by encoding the problem as
+an *Izing model* characterizing the quantum annealer [BCM+20].
 
-All these options are promising. They may have an important time cost
-for us, as SAT solvers are very specialized pieces of softwares, and
-their intersection with other problems may be small. But because of the
-remarkable possibilities they would open, being the first to have a
-working quantum SAT solver may put us in a very good position.
+Finally, de Beaudrap *et al.* managed to encode SAT problems into ZH-calculus 
+--a diagrammatic quantum language taking its roots in category theory-- and use
+its rewrite rules to give tools to simplify SAT formulas [dKM21]. This may be
+an interesting lead as it means that SAT formulas may be encoded as quantum
+circuits, but how to use those circuits to solve the SAT problems is left to
+be determined.
 
-We should also keep in mind that de Beaudrap *et al.* managed to encode
-SAT problems into ZH-calculus --a variant of the diagrammatic quantum
-language ZX-calculus-- and use its rewrite rules to give tools to
-simplify SAT formulas [dKM21]. This may be an interesting lead as it
-means that SAT formulas may be encoded as quantum circuits, but how to
-use those circuits to solve the SAT problems is left to be determined.
+All these options are quite promising and may enable us to solve complex problems
+using quantum computers. And this is where our aim at ColibrITD to create a
+platform to solve various problems unreachable for classical computers is at!
 
 **[Amb05]** A. Ambainis. *Quantum search algorithms.* arXiv:quant-ph/0504012, 2005. <br>
 **[BCCZ99]** A. Biere, A. Cimatti, E. Clarke, and Y. Zhu. *Symbolic Model Checking without BDDs.* In W.R.
