@@ -130,27 +130,9 @@ This is not the end of the line though, by combining the current classical
 algorithms with Grover's, we could obtain a quadratic acceleration, having a
 complexity in *O(1.153...^n)*.
 
-Other leads have also been explored: by nesting quantum search, Cerf *et al.*
-managed to gain an exponential speedup [CGW00], and by using a very different
-method all together, Bian *et al.* managed really recently to use a Quantum
-Annealer to explore the space of possibilities by encoding the problem as
-an *Izing model* characterizing the quantum annealer [BCM+20].
-
-Finally, de Beaudrap *et al.* managed to encode SAT problems into ZH-calculus 
---a diagrammatic quantum language taking its roots in category theory-- and use
-its rewrite rules to give tools to simplify SAT formulas [dKM21]. This may be
-an interesting lead as it means that SAT formulas may be encoded as quantum
-circuits, but how to use those circuits to solve the SAT problems is left to
-be determined.
-
-All these options are quite promising and may enable us to solve complex problems
-using quantum computers. And this is where our aim at *ColibrITD* to create a
-platform to solve various problems unreachable for classical computers is at!
-
-<!-- 
-Note, as seen before, several idea poped up to solve this problem, and the Qiskit
-documentation even mentions one:
-
+This idea of using quantum computer to solve SAT problems was already thought of
+by users of Qiskit, giving us the following solution present in their
+documentation:
 ```py
 from qiskit import Aer
 from qiskit.aqua.components.oracles import LogicalExpressionOracle
@@ -171,7 +153,24 @@ oracle = LogicalExpressionOracle(sat_cnf)
 algorithm = Grover(oracle)
 result = algorithm.run(backend)
 print(result.assignment)
-``` -->
+```
+
+Other leads have also been explored: by nesting quantum search, Cerf *et al.*
+managed to gain an exponential speedup [CGW00], and by using a very different
+method all together, Bian *et al.* managed really recently to use a Quantum
+Annealer to explore the space of possibilities by encoding the problem as
+an *Izing model* characterizing the quantum annealer [BCM+20].
+
+Finally, de Beaudrap *et al.* managed to encode SAT problems into ZH-calculus 
+--a diagrammatic quantum language taking its roots in category theory-- and use
+its rewrite rules to give tools to simplify SAT formulas [dKM21]. This may be
+an interesting lead as it means that SAT formulas may be encoded as quantum
+circuits, but how to use those circuits to solve the SAT problems is left to
+be determined.
+
+All these options are quite promising and may enable us to solve complex problems
+using quantum computers. And this is where our aim at *ColibrITD* to create a
+platform to solve various problems unreachable for classical computers is at!
 
 ## References
 
