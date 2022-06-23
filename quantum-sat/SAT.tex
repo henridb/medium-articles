@@ -1,7 +1,23 @@
 \documentclass{article}
 % \documentclass[twocolumn]{article}
 \usepackage[a4paper,margin=2cm]{geometry}
-\usepackage{lipsum,amsmath}
+\usepackage{lipsum,amsmath,pgfplots}
+\pgfplotsset{compat=1.18}
+
+\pgfplotsset{every axis plot/.prefix style={
+  domain = 0:5,samples = 200,smooth,thick
+}}
+\pgfplotscreateplotcyclelist{my cycle}{
+color=blue!40!black\\
+color=red!50!black\\
+color=green!40!black\\
+color=orange!70!black\\
+color=purple\\
+color=cyan\\
+color=yellow\\
+color=red\\
+color=black\\
+}
 
 \def\QC{\textbf{QC} }
 
@@ -134,6 +150,25 @@ not sufficient to leverage a quantum advantage over the already existing
 algorithms that are cores to SAT solvers. This is not the end of the line
 though, by combining the current classical algorithms with Grover's, we could
 obtain a quadratic acceleration, having a complexity in $O(1.153\ldots^n)$.
+
+Fig \ref{fig:exp} shows those various exponential order of magnitude 
+
+\begin{figure}
+\begin{tikzpicture}
+\begin{axis} [cycle list name=my cycle, legend pos=north west]
+\addplot {1.15^x};
+\addlegendentry{$1.15^x$}
+\addplot {1.33^x};
+\addlegendentry{$1.33^x$}
+\addplot {1.41^x};
+\addlegendentry{$1.41^x$}
+\addplot {2^x};
+\addlegendentry{$2^x$}
+\end{axis}
+\end{tikzpicture}
+\caption{Depiction of the various exponential curves mentioned}
+\label{fig:exp}
+\end{figure}  
 
 Other leads have also been explored: by nesting quantum search, Cerf \emph{et
 al.} managed to gain an exponential speedup \cite{CGW00}, and by using a very

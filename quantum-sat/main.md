@@ -1,5 +1,5 @@
 ---
-title: Solving SAT problems with quantum computers?
+title: Solving (SAT) problems with quantum computers?
 author:
 - Henri de Boutray
 date: 2022-05-10
@@ -27,11 +27,13 @@ tags: ['SAT', 'Quantum computing']
 status: draft
 ---
 
-# Solving problems with SAT
+# Solving (SAT) problems with quantum computers?
+
+## Solving problems with SAT
 
 Problem solving is a cornerstone of our society as it allows us to create complex
 processes that make our lives easier. Improving those processes should probably
-not be a end in itself (efficiency for the beauty of efficiency), but better
+not be an end in itself (efficiency for the beauty of efficiency), but better
 processes may lead to positive outcomes (efficiency for reduced energy
 consumption, simpler processes to understand, etc...). Amongst the problems we
 are confronted to everyday (conscientiously or not), discrete problems are
@@ -41,9 +43,9 @@ SAT problems.
 SAT or boolean SATisfiability problems are problems encoded as logic formulas.
 The goal is to find a value for the variables of the formula such that it
 evaluates to *True*. We say that those values *satisfy* the formula, and when
-such a set exist, the sormula is *satifiable* (it is not always the case!).
+such a set exist, the formula is *satifiable* (it is not always the case!).
 Having the ability to solve SAT problems also enable the solving of many other
-discrete problems. When loogking for a reason to wan to solve SAT problems,
+discrete problems. When looking for a reason to want to solve SAT problems,
 we can first see that SAT is a very complex problem to solve (called a
 NP-complete problem) [Coo71], which makes it a great theoretical study subject
 to analyze fundamental notions concerning quantum advantage (in particular the
@@ -69,9 +71,9 @@ formula size, which implies an important need of efficient solvers.
 Solving more efficiently those problems using quantum computing would
 then enable us to use the quantum advantage for many discrete problems.
 
-# Good candidates for quantum computing
+## Good candidates for quantum computing
 
-Many theoretical algorithms have already been exhibited(more than 400 references
+Many theoretical algorithms have already been exhibited (more than 400 references
 split into more that 60 categories of algorithms centralized in the quantum
 algorithm zoo [Jor21]), some of them have been run on quantum processors, but
 the real promise of breakthrough results thanks to quantum computing is still
@@ -104,7 +106,7 @@ operations per second [Hin18]), this would take around *10^{275}*
 years. Using a quantum search algorithm may transform these questions
 from unthinkable to possible.
 
-# The known, the plan, and the promising
+## The known, the plan, and the promising
 
 ![](resources/GoodBadUgly_stare.png)
 
@@ -116,8 +118,7 @@ reasonable time so they are most often equipped with a timeout kill switch.
 These solvers are estimated to solve a problem in a time in *O(1.329...^n)* (a
 short heads up: complexity theory is used a lot to evaluate quantum advantage,
 if you are not familiar with it, a good place to start is 
-[[this]](https://en.wikipedia.org/wiki/Computational_complexity_theory#Complexity_measures)
-section of the corresponding Wikipedia article).
+[[this]][wiki-complexity] section of the corresponding Wikipedia article).
 
 In comparison, if we manage to create an oracle for this problem, we
 could use Grover's algorithm [Gro96] to solve it with a complexity in
@@ -143,10 +144,38 @@ circuits, but how to use those circuits to solve the SAT problems is left to
 be determined.
 
 All these options are quite promising and may enable us to solve complex problems
-using quantum computers. And this is where our aim at ColibrITD to create a
+using quantum computers. And this is where our aim at *ColibrITD* to create a
 platform to solve various problems unreachable for classical computers is at!
 
-**[Amb05]** A. Ambainis. *Quantum search algorithms.* arXiv:quant-ph/0504012, 2005. <br>
+<!-- 
+Note, as seen before, several idea poped up to solve this problem, and the Qiskit
+documentation even mentions one:
+
+```py
+from qiskit import Aer
+from qiskit.aqua.components.oracles import LogicalExpressionOracle
+from qiskit.aqua.algorithms import Grover
+
+sat_cnf = """
+c Example DIMACS 3-sat
+p cnf 3 5
+-1 -2 -3 0
+1 -2 3 0
+1 2 -3 0
+1 -2 -3 0
+-1 2 3 0
+"""
+
+backend = Aer.get_backend('qasm_simulator')
+oracle = LogicalExpressionOracle(sat_cnf)
+algorithm = Grover(oracle)
+result = algorithm.run(backend)
+print(result.assignment)
+``` -->
+
+## References
+
+**[Amb05]** A. Ambainis. *Quantum search algorithms.* arXiv:quant-ph/0504012, 2005.<br>
 **[BCCZ99]** A. Biere, A. Cimatti, E. Clarke, and Y. Zhu. *Symbolic Model Checking without BDDs.* In W.R.
 Cleaveland, editor, Tools and Algorithms for the Construction and Analysis of Systems, Lecture
 Notes in Computer Science, pages 193–207, Berlin, Heidelberg, 1999. Springer.<br>
@@ -188,3 +217,5 @@ triplets that are generated from boolean formula*, 1994.<br>
 **[TID20]** M. Trimoska, S. Ionica, and G. Dequen. *A SAT-Based Approach for Index Calculus on Binary
 Elliptic Curves.* In Progress in Cryptology-AFRICACRYPT 2020, pages 214–235,
 Cairo, Egypt, 2020.
+
+[wiki-complexity]: https://en.wikipedia.org/wiki/Computational_complexity_theory#Complexity_measures
