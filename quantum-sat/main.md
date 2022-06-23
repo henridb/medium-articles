@@ -154,6 +154,10 @@ algorithm = Grover(oracle)
 result = algorithm.run(backend)
 print(result.assignment)
 ```
+Note here that the SAT problem is encoded in the *sat_cnf* variable, see their
+[GitHub](https://github.com/Qiskit/qiskit-aqua) for more information.
+But as mentioned, event if this is interesting that this solution exist, it is
+not faster than classical as is.
 
 Other leads have also been explored: by nesting quantum search, Cerf *et al.*
 managed to gain an exponential speedup [CGW00], and by using a very different
