@@ -5,3 +5,7 @@ tmp*
 *.pdf
 *.aux
 *.synctex.gz
+*.brt
+*.bbl
+*.blg
+*.out
