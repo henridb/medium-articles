@@ -87,8 +87,9 @@ and we will also use the 2 by 2 identity matrix $I$.
 We consider a thought experiment where we perform operations on a $n$ qubits
 system, and I will show you that this thought experiment exhibits a contextual
 behavior. The experiment is composed of several series of measurements using the
-operators of the Pauli group, defined as
-$$\mathcal{O} = \bigotimes_{i=0}^n P_i$$
+operators of the Pauli group. These operators are defined as a Pauli measurement
+on each wire, with eventually a global phase. They are denoted
+$$\mathcal{O} = s\bigotimes_{i=0}^n P_i$$
 with $s\in\{\pm 1, \pm i\}$ and $P_i\in\{X,Y,Z,I\}$.
 The result of such measurements is in $\pm 1$, and the overall result of the
 experiment is the product of all measurement result. I will show you in Sec. 
@@ -113,10 +114,24 @@ Understanding the links between these properties may help us build an intuition
 concerning quantum computation. This is likely one of the reasons why they are
 so studied! In that regard, let us have a look at one of the papers reveling on
 of the deepest links in my opinion: the 2011 paper by S. Abramsky and A.
-Brandenburger  \cite{AB11}.
+Brandenburger \cite{AB11}.
 
 \section{Link with finite geometries}
 \label{sec:link_with_finite_geometries}
+
+As teased in Sec. \ref{sec:formal_definition}, this contextuality property can
+be exhibited using measures on a $n$ qubits system. The corresponding thought
+experiment is decomposed as such: on this $n$ qubits system, we will perform
+several series of measurements. If we represent each operator used for a
+measurement by a dot, and each series of measurement by a line, we obtain what we
+call a finite geometry. 
+
+This formalism can be complexified such that the finite geometry would live in a
+vector space, and this allows us to perform interesting operations on those
+geometries, but I will leave that as a teaser for an upcoming Medium article
+(for more information, you may read \cite{dHG+22}).
+
+
 
 \section{Link with quantum programs verification}
 \label{sec:link_with_quantum_programs_verification}
