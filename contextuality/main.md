@@ -1,3 +1,20 @@
+---
+title: Contextuality in quantum computing
+author:
+- Henri de Boutray
+date: 2022-12-06
+bibliography:
+- lib.bib
+abstract: |
+  Studying properties of quantum system can lead to many improvements on our
+  ability to use quantum information/computing. In this spirit, this article
+  presents one of these quantum properties called contextuality. After presenting
+  it, I focus on a specific definition of contextuality that I studied in depth,
+  and show how it could be useful for quantum information.
+tags: ['contextuality', 'Quantum computing']
+status: draft
+---
+
 Quantum Mechanics is know as a counter intuitive field, where things
 seen as impossible in our day to day life are perfectly normal. The two
 examples commonly given when mentioning this counter intuitive aspect of
