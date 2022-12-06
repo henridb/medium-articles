@@ -1,0 +1,22 @@
+\begin{thebibliography}{EPR35}
+
+\bibitem[AB11]{AB11}
+S.~Abramsky and A.~Brandenburger.
+\newblock The sheaf-theoretic structure of non-locality and contextuality.
+\newblock {\em New Journal of Physics}, 13(11):113036, November 2011.
+\newblock \url{https://doi.org/10.1088/1367-2630/13/11/113036}.
+
+\bibitem[EPR35]{EPR35}
+A.~Einstein, B.~Podolsky, and N.~Rosen.
+\newblock Can {{Quantum-Mechanical Description}} of {{Physical Reality Be
+  Considered Complete}}?
+\newblock {\em Physical Review}, 47(10):777--780, May 1935.
+\newblock \url{https://link.aps.org/doi/10.1103/PhysRev.47.777}.
+
+\bibitem[Sch35]{Sch35}
+E.~Schr\"odinger.
+\newblock {Die gegenw\"artige Situation in der Quantenmechanik}.
+\newblock {\em Naturwissenschaften}, 23(48):807--812, November 1935.
+\newblock \url{https://doi.org/10.1007/BF01491891}.
+
+\end{thebibliography}
