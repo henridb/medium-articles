@@ -12,7 +12,6 @@ In order to make a good use of this repo, you should have the following programs
 - the following python libraries:
 	+ mdium
 	+ pdf2image
-	+ shutil
 
 ## How it works
 
