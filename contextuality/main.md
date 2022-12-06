@@ -71,16 +71,7 @@ likely no non local abilities.
 After this wacky example of contextuality in our classical world, let’s
 come back on a quantum definition of if. First, some useful notions: The
 Pauli matrices are
-$$X=\begin{pmatrix}
-  0 & 1\\\\
-  1 & 0
-\end{pmatrix},Y=\begin{pmatrix}
-  0 &  -i\\\\
-  i & 0
-\end{pmatrix} \text{ and } Z=\begin{pmatrix}
-  1 & 0\\\\
-  0 &-1
-\end{pmatrix},$$
+$$X=\begin{pmatrix}0 & 1\\1 & 0\end{pmatrix},Y=\begin{pmatrix}0 &  -i\\i & 0\end{pmatrix} \text{ and } Z=\begin{pmatrix}1 & 0\\0 &-1\end{pmatrix},$$
 and we will also use the 2 by 2 identity matrix *I*.
 
 We consider a thought experiment where we perform operations on a *n*
