@@ -48,6 +48,8 @@ Finally, it may even be preferable to write your articles in LaTeX, a pipeline
 could be created, using the software pandoc: to transform LaTex to Markdown, and
 then upload Markdown to Medium. The command to transform LaTex to Markdown using
 pandoc would look like `pandoc -s <your_file_name>.tex -o <your_file_name>.md`.
+(`pandoc -t markdown-citations -s <myfile>.tex -o main.md --bibliography <bib>.bib` 
+would even be better!)
 
 Any help to improve this is apreceated!
 
