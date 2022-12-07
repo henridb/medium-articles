@@ -1,6 +1,6 @@
 \documentclass{article}
 \usepackage[a4paper,margin=2cm]{geometry}
-\usepackage{amsmath,graphicx,xstring,xifthen}
+\usepackage{amsmath,graphicx,xstring,xifthen,tikz}
 \usepackage[backref=page]{hyperref}
 \newcommand*{\addS}[1]{\ifthenelse{#1>1}{s}{\ }}
 \renewcommand*{\backref}[1]{}
@@ -82,7 +82,8 @@ $$X=\begin{pmatrix}
   1 & 0\\
   0 &-1
 \end{pmatrix},$$
-and we will also use the 2 by 2 identity matrix $I$.
+and we will also use the 2 by 2 identity matrix $I$ and the $n$ by $n$ matrix
+$Id$.
 
 We consider a thought experiment where we perform operations on a $n$ qubits
 system, and I will show you that this thought experiment exhibits a contextual
@@ -131,7 +132,60 @@ vector space, and this allows us to perform interesting operations on those
 geometries, but I will leave that as a teaser for an upcoming Medium article
 (for more information, you may read \cite{dHG+22}).
 
+\begin{figure}[!ht]
+\centerline{
+  \begin{tikzpicture}[scale=1.4, 
+  % every node/.style={scale=0.9}
+  ]
+  \node (XY) at (0,0) {$X \otimes Y$};
+  \node (YX) at (1,0) {$Y \otimes X$};
+  \node (ZZ) at (2,0) {$Z \otimes Z$};
+  \node (IY) at (0,1) {$I \otimes Y$};
+  \node (YI) at (1,1) {$Y \otimes I$};
+  \node (YY) at (2,1) {$Y \otimes Y$};
+  \node (XI) at (0,2) {$X \otimes I$};
+  \node (IX) at (1,2) {$I \otimes X$};
+  \node (XX) at (2,2) {$X \otimes X$};
+  \draw (XY) -- (IY) -- (XI) ;
+  \draw (YX) -- (YI) -- (IX) ;
+  \draw [double distance = 2pt] (ZZ) -- (YY) -- (XX) ;
+  \draw (XY) -- (YX) -- (ZZ) ;
+  \draw (IY) -- (YI) -- (YY) ;
+  \draw (XI) -- (IX) -- (XX) ;
+  \end{tikzpicture}
+}
+\caption{The Mermin square}
+\label{fig:mermin-square}
+\end{figure}
 
+Fig. \ref{fig:mermin-square} represent such an experiment, where the operator
+used are the points and the series of measurement are the lines (vertical and
+horizontal) of this figure. Note that the last vertical line is doubled, we will
+see shortly why that is.
+
+First, let us check what the result of this experiment will be. Each operator
+here has its eigenvalues in $\pm1$, meaning each result of a single measurement
+will either be $1$ or $-1$. In addition, each line is built such that the
+operators composing it commute (for two operators on a line $O_1$ and $O_2$,
+$O_1O_2=O_2O_1$). With the rules of quantum mechanics, this results in the
+fact that the product of the measurements is in the spectrum (the set of all
+eigenvalues) of the product of the operators (if $r_i$ is the result of a
+measure by $O_i$, $\prod_i r_i \in sp(\prod_i O_i)$). Given that each line was
+also made such that the product of the operators is either $Id$ or $-Id$ (and
+that $sp(Id)=\{1\}$), the product of the measures on each line will either be $1$
+or $-1$. This is where our doubled line mentioned earlier comes into play: it is
+the only one where the product of the result is $-1$. This means that the overall
+product is $-1$ and this result cannot be reproduced by classical non contextual
+local theories!
+
+Such a theory (non contextual and local) can be modeled by a function that would
+attribute to each point a value in $\pm1$ (the result of the "measurement"). Each
+point being in two lines, the product of all measurements would in this case look
+like $\prod_i f(O_i) \times \prod_i f(O_i) = (\prod_i f(O_i))^2 = 1$.
+
+As you may have picked up, not all experiments similar to the one shown in Fig.
+\ref{fig:mermin-square} can show this contextual behavior, the operators and
+series of measurements have to be carefully chose.
 
 \section{Link with quantum programs verification}
 \label{sec:link_with_quantum_programs_verification}

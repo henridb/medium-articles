@@ -52,7 +52,8 @@ pandoc would look like `pandoc -s <your_file_name>.tex -o <your_file_name>.md`.
 ```
 pandoc -t markdown_strict --citeproc -t markdown-citations -s <myfile>.tex -o main.md --bibliography <bib>.bib
 ```
-would even be better!)
+could even be better: it converts the equations to UTF-8 and includes the 
+referenced, but I personaly do not like the references format)
 
 Any help to improve this is apreceated!
 
