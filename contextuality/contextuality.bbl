@@ -1,4 +1,5 @@
-\begin{thebibliography}{EPR35}
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{dBHG{\etalchar{+}}22}
 
 \bibitem[AB11]{AB11}
 S.~Abramsky and A.~Brandenburger.
@@ -6,12 +7,26 @@ S.~Abramsky and A.~Brandenburger.
 \newblock {\em New Journal of Physics}, 13(11):113036, November 2011.
 \newblock \url{https://doi.org/10.1088/1367-2630/13/11/113036}.
 
+\bibitem[dBHG{\etalchar{+}}22]{dHG+22}
+H.~de~Boutray, F.~Holweck, A.~Giorgetti, P.~Masson, and M.~Saniga.
+\newblock Contextuality degree of quadrics in multi-qubit symplectic polar
+  spaces.
+\newblock {\em Journal of Physics A: Mathematical and Theoretical},
+  55(47):475301, November 2022.
+\newblock \url{https://dx.doi.org/10.1088/1751-8121/aca36f}.
+
 \bibitem[EPR35]{EPR35}
 A.~Einstein, B.~Podolsky, and N.~Rosen.
 \newblock Can {{Quantum-Mechanical Description}} of {{Physical Reality Be
   Considered Complete}}?
 \newblock {\em Physical Review}, 47(10):777--780, May 1935.
 \newblock \url{https://link.aps.org/doi/10.1103/PhysRev.47.777}.
+
+\bibitem[Hoa69]{Hoa69}
+C.~A.~R. Hoare.
+\newblock An axiomatic basis for computer programming.
+\newblock {\em Communications of the ACM}, 12(10):576--580, October 1969.
+\newblock \url{https://doi.org/10.1145/363235.363259}.
 
 \bibitem[Sch35]{Sch35}
 E.~Schr\"odinger.
