@@ -1,11 +1,12 @@
 \documentclass{article}
 \usepackage[a4paper,margin=2cm]{geometry}
-\usepackage{amsmath,graphicx,listings}
-\usepackage[backref=page]{hyperref}
-\newcommand*{\addS}[1]{\ifthenelse{#1>1}{s}{\ }}
-\renewcommand*{\backref}[1]{}
-\renewcommand*{\backrefalt}[4]{Citation\addS{#3} at page\addS{#1} #2.}
-\renewcommand*{\backrefentrycount}[2]{#1\ifnum#2>1 ~(#2)\fi}
+\usepackage{amsmath,graphicx,listings,hyperref}
+% \usepackage{xstring,xifthen}
+% \usepackage[backref=page]{hyperref}
+% \newcommand*{\addS}[1]{\ifthenelse{#1>1}{s}{\ }}
+% \renewcommand*{\backref}[1]{}
+% \renewcommand*{\backrefalt}[4]{Citation\addS{#3} at page\addS{#1} #2.}
+% \renewcommand*{\backrefentrycount}[2]{#1\ifnum#2>1 ~(#2)\fi}
 
 \lstset{
   columns=flexible,
@@ -140,7 +141,7 @@ geometries, but I will leave that as a teaser for an upcoming Medium article
 (for more information, you may read \cite{dHG+22}).
 
 \begin{figure}[!ht]
-\centerline{\includegraphics{resources/mermin-square.pdf}}
+\centerline{\includegraphics[height=6cm]{resources/mermin-square.png}}
 \caption{The Mermin square}
 \label{fig:mermin-square}
 \end{figure}
@@ -199,9 +200,9 @@ program (n) {
 The program is supposed to compute $2n+1$, the condition for the input variable
 (also called pre-condition) being that it's a number, the condition for the
 output (also called post-condition) will be that it's a number and that 
-$program(n)=2n+1$. Given that one can show that we should have $2n+1=f_2(a)=2a$,
-and thus that $2n+1=2f_1(n)=2(n+1)$. Since this is false, we showed that our
-function has a bug (without executing it)!
+\verb@program(n)=2n+1@. Given that one can show that we should have 
+$2n+1=f_2(a)=2a$, and thus that $2n+1=2f_1(n)=2(n+1)$. Since this is false, we
+showed that our function has a bug (without executing it)!
 
 This is a very powerful way to verify programs, but it is pretty hard to
 accomplish. My previous works put the focus on trying to ease this for quantum
