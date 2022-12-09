@@ -76,7 +76,7 @@ a contextual behavior. The experiment is composed of several series of
 measurements using the operators of the Pauli group. These operators are
 defined as a Pauli measurement on each wire, with eventually a global
 phase. They are denoted
-$$\mathcal{O} = s\bigotimes\_{i = 0}^n P\_i$$
+$$\mathcal{O} = s\bigotimes_{i=0}^n P_i$$
 with *s* ∈ {±1, ±*i*} and *P*ᵢ ∈ {*X*, *Y*, *Z*, *I*}.
 The result of such measurements is in ±1, and the overall result of
 the experiment is the product of all measurement result. I will show you
@@ -88,37 +88,43 @@ result non reproducible by classical, non contextual theory.
 
 ## 2. Link with other quantum specific properties
 
-What we call quantum properties are quantum specific behaviors. They can
-arise directly from the laws of quantum mechanics, such as the
-destructive nature of measurements, but they can also be "meta"
-properties[1], arising from the superposition of several other quantum
-properties. Entanglement is the example of such a meta property (we
-couldn’t have entanglement without superposition), and contextuality is
-too: the way quantum measurements work is absolutely necessary for
-quantum contextuality (the fact that the measure projects the state on
-the space corresponding to the result observed is the root of the
+What we call quantum properties are quantum specific behaviors. They can arise
+directly from the laws of quantum mechanics, such as the destructive nature of
+measurements, but they can also be "meta" properties[1], arising from the
+superposition of several other quantum properties. Entanglement is the example
+of such a meta property (we couldn’t have entanglement without superposition),
+and contextuality is too: the way quantum measurements work is absolutely
+necessary for quantum contextuality (the fact that the measure projects the
+state on the space corresponding to the result observed is the root of the
 contextual behaviors).
 
-Understanding the links between these properties may help us build an
-intuition concerning quantum computation. This is likely one of the
-reasons why they are so studied! In that regard, let us have a look at
-one of the papers reveling on of the deepest links in my opinion: the
-2011 paper by S. Abramsky and A. Brandenburger \[AB11\].
+Understanding the links between these properties may help us build an intuition
+concerning quantum computation. This is likely one of the reasons why they are
+so studied! In that regard, let us have a look at one of the papers reveling on
+of the deepest links in my opinion: the 2011 paper by S. Abramsky and A.
+Brandenburger \[AB11\].
+
+In this paper, the authors show that non locality and quantum contextuality are
+in fact two ways to look at the same situation. And in a much deeper level, that
+some of the concepts having a role in those meta properties are in fact not
+necessarily related to quantum mechanics specifically but in a more general way
+to the mathematical specificities of the probability distribution of the
+associated measurement results.
 
 ## 3. Link with finite geometries
 
 As teased in Sec. <a href="#sec:formal_definition" data-reference-type="ref"
-data-reference="sec:formal_definition">1</a>, this contextuality
-property can be exhibited using measures on a *n* qubits system. The
-corresponding thought experiment is decomposed as such: on this *n*
-qubits system, we will perform several series of measurements. If we
-represent each operator used for a measurement by a dot, and each series
-of measurement by a line, we obtain what we call a finite geometry.
+data-reference="sec:formal_definition">1</a>, this contextuality property can be
+exhibited using measures on a *n* qubits system. The corresponding thought
+experiment is decomposed as such: on this *n* qubits system, we will perform
+several series of measurements. If we represent each operator used for a
+measurement by a dot, and each series of measurement by a line, we obtain what
+we call a finite geometry.
 
-This formalism can be complexified such that the finite geometry would
-live in a vector space, and this allows us to perform interesting
-operations on those geometries, but I will leave that as a teaser for an
-upcoming Medium article (for more information, you may read \[dBHG+22\]).
+This formalism can be complexified such that the finite geometry would live in a
+vector space, and this allows us to perform interesting operations on those
+geometries, but I will leave that as a teaser for an upcoming Medium article
+(for more information, you may read \[dBHG+22\]).
 
 <figure>
 <img src="resources/mermin-square.png" style="height:6cm"
@@ -127,10 +133,10 @@ alt="The Mermin square" />
 </figure>
 
 Fig. <a href="#fig:mermin-square" data-reference-type="ref"
-data-reference="fig:mermin-square">1</a> represent such an experiment,
-where the operator used are the points and the series of measurement are
-the lines (vertical and horizontal) of this figure. Note that the last
-vertical line is doubled, we will see shortly why that is.
+data-reference="fig:mermin-square">1</a> represent such an experiment, where the
+operator used are the points and the series of measurement are the lines
+(vertical and horizontal) of this figure. Note that the last vertical line is
+doubled, we will see shortly why that is.
 
 First, let us check what the result of this experiment will be. Each operator
 here has its eigenvalues in ±1, meaning each result of a single measurement will
