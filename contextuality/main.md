@@ -62,7 +62,7 @@ probably how the medium guessed what happened (or rather what is happening). So
 in the end the experience you just lived could be explained by a contextual
 explanation of the event, and the medium has likely no non local abilities.
 
-## 1. Formal definition
+## 1. Formal definition {#sec:formal-definition}
 
 After this wacky example of contextuality in our classical world, let’s
 come back on a quantum definition of if. First, some useful notions: The
@@ -87,7 +87,7 @@ data-reference="sec:link_with_finite_geometries">3</a> that we can
 construct such experiments where where quantum theory can produce a
 result non reproducible by classical, non contextual theory.
 
-## 2. Link with other quantum specific properties
+## 2. Link with other quantum specific properties {#sec:link-with-other-quantum-specific-properties}
 
 What we call quantum properties are quantum specific behaviors. They can
 arise directly from the laws of quantum mechanics, such as the
@@ -106,7 +106,7 @@ reasons why they are so studied! In that regard, let us have a look at
 one of the papers reveling on of the deepest links in my opinion: the
 2011 paper by S. Abramsky and A. Brandenburger \[AB11\].
 
-## 3. Link with finite geometries
+## 3. Link with finite geometries {#sec:link-with-finite-geometries}
 
 As teased in Sec. <a href="#sec:formal_definition" data-reference-type="ref"
 data-reference="sec:formal_definition">1</a>, this contextuality
@@ -159,7 +159,7 @@ data-reference="fig:mermin-square">1</a> can show this contextual
 behavior, the operators and series of measurements have to be carefully
 chose.
 
-## 4. Link with quantum programs verification
+## 4. Link with quantum programs verification {#sec:link-with-quantum-programs-verification}
 
 Program verification is a concept that stems as early as from the
 beginning of computer science. For instance, Hoare logic \[Hoa69\]
