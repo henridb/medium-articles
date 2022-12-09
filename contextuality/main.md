@@ -15,6 +15,8 @@ tags: ['contextuality', 'Quantum computing']
 status: draft
 ---
 
+# Contextuality in quantum computing
+
 Quantum Mechanics is know as a counter intuitive field, where things seen as
 impossible in our day to day life are perfectly normal. The two examples
 commonly given when mentioning this counter intuitive aspect of quantum
@@ -60,7 +62,7 @@ probably how the medium guessed what happened (or rather what is happening). So
 in the end the experience you just lived could be explained by a contextual
 explanation of the event, and the medium has likely no non local abilities.
 
-# 1. Formal definition
+## 1. Formal definition
 
 After this wacky example of contextuality in our classical world, let’s
 come back on a quantum definition of if. First, some useful notions: The
@@ -85,7 +87,7 @@ data-reference="sec:link_with_finite_geometries">3</a> that we can
 construct such experiments where where quantum theory can produce a
 result non reproducible by classical, non contextual theory.
 
-# 2. Link with other quantum specific properties
+## 2. Link with other quantum specific properties
 
 What we call quantum properties are quantum specific behaviors. They can
 arise directly from the laws of quantum mechanics, such as the
@@ -104,10 +106,9 @@ reasons why they are so studied! In that regard, let us have a look at
 one of the papers reveling on of the deepest links in my opinion: the
 2011 paper by S. Abramsky and A. Brandenburger \[AB11\].
 
-# 3. Link with finite geometries
+## 3. Link with finite geometries
 
-As teased in Sec.
-<a href="#sec:formal_definition" data-reference-type="ref"
+As teased in Sec. <a href="#sec:formal_definition" data-reference-type="ref"
 data-reference="sec:formal_definition">1</a>, this contextuality
 property can be exhibited using measures on a *n* qubits system. The
 corresponding thought experiment is decomposed as such: on this *n*
@@ -158,7 +159,7 @@ data-reference="fig:mermin-square">1</a> can show this contextual
 behavior, the operators and series of measurements have to be carefully
 chose.
 
-# 4. Link with quantum programs verification
+## 4. Link with quantum programs verification
 
 Program verification is a concept that stems as early as from the
 beginning of computer science. For instance, Hoare logic \[Hoa69\]
@@ -193,14 +194,14 @@ quantum program, by studying properties of quantum states that could be
 used in quantum program verification. Contextuality is one of those
 properties, even if (as of now) it wasn’t used in this context.
 
-# At ColibrITD
+## At ColibrITD
 
 At *colibrITD*, we create programs that efficiently solve our costumers’
 industrial problems. Since we target industrial problems, bugs can be
 very costly, so having tools to automate the verification of our quantum
 programs is precious for us!
 
-# References
+## References
 
 \[AB11\] Abramsky, S., and A. Brandenburger. 2011. “The Sheaf-Theoretic Structure
 of Non-Locality and Contextuality.” *New Journal of Physics* 13 (11):
