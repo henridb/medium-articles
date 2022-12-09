@@ -76,7 +76,7 @@ measurements using the operators of the Pauli group. These operators are
 defined as a Pauli measurement on each wire, with eventually a global
 phase. They are denoted
 $$\mathcal{O} = s\bigotimes\_{i=0}^n P\_i$$
-with *s* ∈ {±1, ±*i*} and *P*<sub>*i*</sub> ∈ {*X*, *Y*, *Z*, *I*}.
+with *s* ∈ {±1, ±*i*} and *P*ᵢ ∈ {*X*, *Y*, *Z*, *I*}.
 The result of such measurements is in ±1, and the overall result of
 the experiment is the product of all measurement result. I will show you
 in Sec.
@@ -131,31 +131,25 @@ where the operator used are the points and the series of measurement are
 the lines (vertical and horizontal) of this figure. Note that the last
 vertical line is doubled, we will see shortly why that is.
 
-First, let us check what the result of this experiment will be. Each
-operator here has its eigenvalues in ±1, meaning each result of a
-single measurement will either be 1 or −1. In addition, each line is
-built such that the operators composing it commute (for two operators on
-a line *O*<sub>1</sub> and *O*<sub>2</sub>,
-*O*<sub>1</sub>*O*<sub>2</sub>=*O*<sub>2</sub>*O*<sub>1</sub>). With
-the rules of quantum mechanics, this results in the fact that the
-product of the measurements is in the spectrum (the set of all
-eigenvalues) of the product of the operators (if *r*<sub>*i*</sub> is
-the result of a measure by *O*<sub>*i*</sub>,
-∏<sub>*i*</sub> *r*<sub>*i*</sub> ∈ *sp*(∏<sub>*i*</sub> *O*<sub>*i*</sub>)).
-Given that each line was also made such that the product of the
-operators is either *Id* or −*Id* (and that *sp*(*Id*)={1}),
-the product of the measures on each line will either be 1 or −1. This
-is where our doubled line mentioned earlier comes into play: it is the
-only one where the product of the result is −1. This means that the
-overall product is −1 and this result cannot be reproduced by
-classical non contextual local theories!
+First, let us check what the result of this experiment will be. Each operator
+here has its eigenvalues in ±1, meaning each result of a single measurement will
+either be 1 or −1. In addition, each line is built such that the operators
+composing it commute (for two operators on a line *O*₁ and *O*₂, *O*₁*O*₂ = 
+*O*₂*O*₁). With the rules of quantum mechanics, this results in the fact that the
+product of the measurements is in the spectrum (the set of all eigenvalues) of
+the product of the operators (if *r*ᵢ is the result of a measure by *O*ᵢ, ∏ᵢ *r*ᵢ 
+∈ *sp*(∏ᵢ *O*ᵢ)). Given that each line was also made such that the product of the
+operators is either *Id* or −*Id* (and that *sp*(*Id*)={1}), the product of the
+measures on each line will either be 1 or −1. This is where our doubled line
+mentioned earlier comes into play: it is the only one where the product of the
+result is −1. This means that the overall product is −1 and this result cannot
+be reproduced by classical non contextual local theories!
 
 Such a theory (non contextual and local) can be modeled by a function
 that would attribute to each point a value in ±1 (the result of the
 "measurement"). Each point being in two lines, the product of all
 measurements would in this case look like <br>
-∏<sub>*i*</sub> *f*(*O*<sub>*i*</sub>)×∏<sub>*i*</sub> *f*(*O*<sub>*i*</sub>) =
-(∏<sub>*i*</sub> *f*(*O*<sub>*i*</sub>))<sup>2</sup>=1.
+∏ᵢ *f*(*O*ᵢ)×∏ᵢ *f*(*O*ᵢ) = (∏ᵢ *f*(*O*ᵢ))²=1.
 
 As you may have picked up, not all experiments similar to the one shown
 in Fig. <a href="#fig:mermin-square" data-reference-type="ref"
@@ -185,13 +179,12 @@ the input variable. Let us take a small example to explore this concept:
       return b;
     }
 
-The program is supposed to compute 2*n*+1, the condition for the input
-variable (also called pre-condition) being that it’s a number, the
-condition for the output (also called post-condition) will be that it’s
-a number and that `program(n)=2n+1`. Given that one can show that we should have 
-2*n*+1=*f*<sub>2</sub>(*a*)=2*a*, and thus that 
-2*n*+1=2*f*<sub>1</sub>(*n*)=2(*n*+1). Since this is false, we showed that our 
-function has a bug (without executing it)!
+The program is supposed to compute 2*n*+1, the condition for the input variable
+(also called pre-condition) being that it’s a number, the condition for the
+output (also called post-condition) will be that it’s a number and that 
+`program(n)=2n+1`. Given that one can show that we should have 
+2*n*+1=*f*₂(*a*)=2*a*, and thus that 2*n*+1=2*f*₁(*n*)=2(*n*+1). Since this is
+false, we showed that our function has a bug (without executing it)!
 
 This is a very powerful way to verify programs, but it is pretty hard to
 accomplish. My previous works put the focus on trying to ease this for
