@@ -1,11 +1,18 @@
 \documentclass{article}
 \usepackage[a4paper,margin=2cm]{geometry}
-\usepackage{amsmath,graphicx,xstring,xifthen,tikz}
+\usepackage{amsmath,graphicx,listings}
 \usepackage[backref=page]{hyperref}
 \newcommand*{\addS}[1]{\ifthenelse{#1>1}{s}{\ }}
 \renewcommand*{\backref}[1]{}
 \renewcommand*{\backrefalt}[4]{Citation\addS{#3} at page\addS{#1} #2.}
 \renewcommand*{\backrefentrycount}[2]{#1\ifnum#2>1 ~(#2)\fi}
+
+\lstset{
+  columns=flexible,
+  basicstyle=\small\ttfamily,
+  mathescape=true,
+  escapeinside=||
+}
 
 \title{Contextuality in quantum computing}
 \author{Henri de Boutray}
@@ -133,27 +140,7 @@ geometries, but I will leave that as a teaser for an upcoming Medium article
 (for more information, you may read \cite{dHG+22}).
 
 \begin{figure}[!ht]
-\centerline{
-  \begin{tikzpicture}[scale=1.4, 
-  % every node/.style={scale=0.9}
-  ]
-  \node (XY) at (0,0) {$X \otimes Y$};
-  \node (YX) at (1,0) {$Y \otimes X$};
-  \node (ZZ) at (2,0) {$Z \otimes Z$};
-  \node (IY) at (0,1) {$I \otimes Y$};
-  \node (YI) at (1,1) {$Y \otimes I$};
-  \node (YY) at (2,1) {$Y \otimes Y$};
-  \node (XI) at (0,2) {$X \otimes I$};
-  \node (IX) at (1,2) {$I \otimes X$};
-  \node (XX) at (2,2) {$X \otimes X$};
-  \draw (XY) -- (IY) -- (XI) ;
-  \draw (YX) -- (YI) -- (IX) ;
-  \draw [double distance = 2pt] (ZZ) -- (YY) -- (XX) ;
-  \draw (XY) -- (YX) -- (ZZ) ;
-  \draw (IY) -- (YI) -- (YY) ;
-  \draw (XI) -- (IX) -- (XX) ;
-  \end{tikzpicture}
-}
+\centerline{\includegraphics{resources/mermin-square.pdf}}
 \caption{The Mermin square}
 \label{fig:mermin-square}
 \end{figure}
@@ -200,14 +187,15 @@ be translated as a series of application of a (mathematical) function to a
 certain variable encoding the state of the system. The proof is then to show that
 the output variable validates the condition imposed by the programmer, given the
 input variable. Let us take a small example to explore this concept:
-$$f_1(x) = x+1; f_2(x) = 2x$$
-\begin{align*}
-& program (n)\ \{\\
-& \quad  a = f_1(n);\\
-& \quad  b = f_2(a);\\
-& \quad  return\ b;\\
-& \}\\
-\end{align*}
+\begin{lstlisting}
+$f_1$(x) = x+1; $f_2$(x) = 2x
+
+program (n) {
+  a = $f_1$(n);
+  b = $f_2$(a);
+  return b;
+}
+\end{lstlisting}
 The program is supposed to compute $2n+1$, the condition for the input variable
 (also called pre-condition) being that it's a number, the condition for the
 output (also called post-condition) will be that it's a number and that 
@@ -216,11 +204,17 @@ and thus that $2n+1=2f_1(n)=2(n+1)$. Since this is false, we showed that our
 function has a bug (without executing it)!
 
 This is a very powerful way to verify programs, but it is pretty hard to
-accomplish. My previous works focus on trying to ease this for quantum program,
-by studying properties of quantum states that could be used in quantum program
-verification. 
+accomplish. My previous works put the focus on trying to ease this for quantum
+program, by studying properties of quantum states that could be used in quantum
+program verification. Contextuality is one of those properties, even if (as of
+now) it wasn't used in this context.
 
 \section*{At ColibrITD}
+
+At \emph{colibrITD}, we create programs that efficiently solve our costumers'
+industrial problems. Since we target industrial problems, bugs can be very
+costly, so having tools to automate the verification of our quantum programs is
+precious for us!
 
 \bibliographystyle{alpha}
 \bibliography{lib.bib}
