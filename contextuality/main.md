@@ -65,7 +65,7 @@ explanation of the event, and the medium has likely no non local abilities.
 After this wacky example of contextuality in our classical world, let’s
 come back on a quantum definition of if. First, some useful notions: The
 Pauli matrices are
-$$X=\begin{pmatrix}  0 & 1\\\\  1 & 0\end{pmatrix},Y=\begin{pmatrix}  0 &  -i\\\\  i & 0\end{pmatrix} \text{ and } Z=\begin{pmatrix}  1 & 0\\\\  0 &-1\end{pmatrix},$$
+$$X = \begin{pmatrix}  0 & 1\\  1 & 0\end{pmatrix},Y = \begin{pmatrix}  0 &  -i\\  i & 0\end{pmatrix} \text{ and } Z = \begin{pmatrix}  1 & 0\\  0 &-1\end{pmatrix},$$
 and we will also use the 2 by 2 identity matrix *I* and the *n* by *n*
 matrix *Id*.
 
@@ -75,7 +75,7 @@ a contextual behavior. The experiment is composed of several series of
 measurements using the operators of the Pauli group. These operators are
 defined as a Pauli measurement on each wire, with eventually a global
 phase. They are denoted
-$$\mathcal{O} = s\bigotimes\_{i=0}^n P\_i$$
+$$\mathcal{O} = s\bigotimes\_{i = 0}^n P\_i$$
 with *s* ∈ {±1, ±*i*} and *P*ᵢ ∈ {*X*, *Y*, *Z*, *I*}.
 The result of such measurements is in ±1, and the overall result of
 the experiment is the product of all measurement result. I will show you
@@ -121,7 +121,8 @@ operations on those geometries, but I will leave that as a teaser for an
 upcoming Medium article (for more information, you may read \[dBHG+22\]).
 
 <figure>
-<embed src="resources/mermin-square.pdf" id="fig:mermin-square" />
+<img src="resources/mermin-square.png" style="height:6cm"
+alt="The Mermin square" />
 <figcaption aria-hidden="true">The Mermin square</figcaption>
 </figure>
 
@@ -139,7 +140,7 @@ composing it commute (for two operators on a line *O*₁ and *O*₂, *O*₁*O*�
 product of the measurements is in the spectrum (the set of all eigenvalues) of
 the product of the operators (if *r*ᵢ is the result of a measure by *O*ᵢ, ∏ᵢ *r*ᵢ 
 ∈ *sp*(∏ᵢ *O*ᵢ)). Given that each line was also made such that the product of the
-operators is either *Id* or −*Id* (and that *sp*(*Id*)={1}), the product of the
+operators is either *Id* or −*Id* (and that *sp*(*Id*) = {1}), the product of the
 measures on each line will either be 1 or −1. This is where our doubled line
 mentioned earlier comes into play: it is the only one where the product of the
 result is −1. This means that the overall product is −1 and this result cannot
@@ -149,7 +150,7 @@ Such a theory (non contextual and local) can be modeled by a function
 that would attribute to each point a value in ±1 (the result of the
 "measurement"). Each point being in two lines, the product of all
 measurements would in this case look like <br>
-∏ᵢ *f*(*O*ᵢ)×∏ᵢ *f*(*O*ᵢ) = (∏ᵢ *f*(*O*ᵢ))²=1.
+∏ᵢ *f*(*O*ᵢ)×∏ᵢ *f*(*O*ᵢ) = (∏ᵢ *f*(*O*ᵢ))² = 1.
 
 As you may have picked up, not all experiments similar to the one shown
 in Fig. <a href="#fig:mermin-square" data-reference-type="ref"
@@ -182,8 +183,8 @@ the input variable. Let us take a small example to explore this concept:
 The program is supposed to compute 2*n*+1, the condition for the input variable
 (also called pre-condition) being that it’s a number, the condition for the
 output (also called post-condition) will be that it’s a number and that 
-`program(n)=2n+1`. Given that one can show that we should have 
-2*n*+1=*f*₂(*a*)=2*a*, and thus that 2*n*+1=2*f*₁(*n*)=2(*n*+1). Since this is
+`program(n) = 2n+1`. Given that one can show that we should have 
+2*n*+1 = *f*₂(*a*) = 2*a*, and thus that 2*n*+1 = 2*f*₁(*n*) = 2(*n*+1). Since this is
 false, we showed that our function has a bug (without executing it)!
 
 This is a very powerful way to verify programs, but it is pretty hard to
