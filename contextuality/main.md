@@ -144,13 +144,13 @@ either be 1 or −1. In addition, each line is built such that the operators
 composing it commute (for two operators on a line *O*₁ and *O*₂, *O*₁*O*₂ = 
 *O*₂*O*₁). With the rules of quantum mechanics, this results in the fact that the
 product of the measurements is in the spectrum (the set of all eigenvalues) of
-the product of the operators (if *r*ᵢ is the result of a measure by *O*ᵢ, ∏ᵢ *r*ᵢ 
-∈ *sp*(∏ᵢ *O*ᵢ)). Given that each line was also made such that the product of the
-operators is either *Id* or −*Id* (and that *sp*(*Id*) = {1}), the product of the
-measures on each line will either be 1 or −1. This is where our doubled line
-mentioned earlier comes into play: it is the only one where the product of the
-result is −1. This means that the overall product is −1 and this result cannot
-be reproduced by classical non contextual local theories!
+the product of the operators (if *r*ᵢ is the result of a measure by <br> 
+*O*ᵢ, ∏ᵢ *r*ᵢ ∈ *sp*(∏ᵢ *O*ᵢ)). Given that each line was also made such that the
+product of the operators is either *Id* or −*Id* (and that *sp*(*Id*) ={1}), the
+product of the measures on each line will either be 1 or −1. This is where our
+doubled line mentioned earlier comes into play: it is the only one where the
+product of the result is −1. This means that the overall product is −1 and this
+result cannot be reproduced by classical non contextual local theories!
 
 Such a theory (non contextual and local) can be modeled by a function
 that would attribute to each point a value in ±1 (the result of the
