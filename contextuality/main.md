@@ -17,15 +17,15 @@ status: draft
 
 # Contextuality in quantum computing
 
-Quantum Mechanics is know as a counter intuitive field, where things seen as
-impossible in our day to day life are perfectly normal. The two examples
+Quantum Mechanics is know as a counterintuitive field, where things seen as
+impossible in our day-to-day life are perfectly normal. The two examples
 commonly given when mentioning this counter intuitive aspect of quantum
 mechanics is mentioned are the superposition (the fact that Schrödinger’s cat is
 both dead and alive as long as its box isn’t opened \[Sch35\]) and entanglement
 (the fact that two particles can be in a state where acting on one of them would
 seemingly immediately have an effect of the other, such as measuring one of the
-qubits of the Bell state \[EPR35\]). Other properties such as the destructive nature
-of the quantum measure (also related to Schrödinger’s cat thought experiment) can
+qubits of the Bell state \[EPR35\]). Other properties, such as the destructive nature
+of the quantum measure (also related to Schrödinger’s cat thought experiment), can
 be mentioned, but today, I will present you a property that is less popular, but
 as disconcerting the first time you cross its path: the *contextuality*!
 
@@ -34,10 +34,10 @@ entanglement) as explored in \[AB11\] and to hidden variable theories, but we wi
 focus here on a fresh look on the subject by trying to start from an easy to
 grasp common ground, and introducing only strictly necessary notion as we go.
 
-So! We call an situation contextual when it’s actors need a knowledge of the
+So! We call a situation contextual when its actors need a knowledge of the
 context in order to explain the aftermath of the situation. And we also need to
 restrict the ability of the actors to only perform *local* actions (no faster
-than light communication). Given this, let’s see a situation where we would like
+than light communication). Given this, let us examine a case where we would like
 to see if the situation is contextual or not.
 
 <figure>
@@ -64,7 +64,7 @@ explanation of the event, and the medium has likely no non local abilities.
 ## 1. Formal definition
 
 After this wacky example of contextuality in our classical world, let’s
-come back on a quantum definition of if. First, some useful notions: The
+come back on a quantum definition of it. First, some useful notions: The
 Pauli matrices are
 $$X = \begin{pmatrix}  0 & 1\\  1 & 0\end{pmatrix},Y = \begin{pmatrix}  0 &  -i\\  i & 0\end{pmatrix} \text{ and } Z = \begin{pmatrix}  1 & 0\\  0 &-1\end{pmatrix},$$
 and we will also use the 2 by 2 identity matrix *I* and the *n* by *n*
@@ -83,7 +83,7 @@ the experiment is the product of all measurement result. I will show you
 in Sec.
 <a href="#sec:link_with_finite_geometries" data-reference-type="ref"
 data-reference="sec:link_with_finite_geometries">3</a> that we can
-construct such experiments where where quantum theory can produce a
+construct such experiments where quantum theory can produce a
 result non reproducible by classical, non contextual theory.
 
 ## 2. Link with other quantum specific properties
@@ -107,7 +107,7 @@ Brandenburger \[AB11\].
 In this paper, the authors show that non locality and quantum contextuality are
 in fact two ways to look at the same situation. And in a much deeper level, that
 some of the concepts having a role in those meta properties are in fact not
-necessarily related to quantum mechanics specifically but in a more general way
+necessarily related to quantum mechanics specifically but, in a more general way,
 to the mathematical specificities of the probability distribution of the
 associated measurement results.
 
