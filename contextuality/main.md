@@ -87,8 +87,8 @@ classical, non contextual theory.
 
 What we call quantum properties are quantum specific behaviors. They can arise
 directly from the laws of quantum mechanics, such as the destructive nature of
-measurements, but they can also be "meta" properties[1], arising from the
-superposition of several other quantum properties. Entanglement is the example
+measurements, but they can also be "meta" properties [1], arising from the
+combination of several other quantum properties. Entanglement is the example
 of such a meta property (we couldn’t have entanglement without superposition),
 and contextuality is too: the way quantum measurements work is absolutely
 necessary for quantum contextuality (the fact that the measure projects the
@@ -97,7 +97,7 @@ contextual behaviors).
 
 Understanding the links between these properties may help us build an intuition
 concerning quantum computation. This is likely one of the reasons why they are
-so studied! In that regard, let us have a look at one of the papers revealing on
+so studied! In that regard, let us have a look at one of the papers revealing one
 of the deepest links in my opinion: the 2011 paper by S. Abramsky and A.
 Brandenburger \[AB11\].
 
@@ -146,30 +146,30 @@ doubled line mentioned earlier comes into play: it is the only one where the
 product of the result is −1. This means that the overall product is −1 and this
 result cannot be reproduced by classical non contextual local theories!
 
-The reason why this result cannot be reproduced by classical non contextual local
-theories is that uch a theory can be modeled by a function that would attribute
-to each point a value in ±1 (the result of the "measurement"). Each point being
-in two lines, the product of all measurements would in this case look like <br>
-∏ᵢ *f*(*O*ᵢ)×∏ᵢ *f*(*O*ᵢ) = (∏ᵢ *f*(*O*ᵢ))² = 1. So in one case we obtain as a 
-result -1 while in the other, can can't ever obtain anything but 1.
+The reason why this result cannot be reproduced that such a theory can be modeled
+by a function that would attribute to each point a value in ±1 (the result of
+the "measurement"). Each point being in two lines, the product of all
+measurements would in this case look like <br> 
+∏ᵢ *f*(*O*ᵢ)×∏ᵢ *f*(*O*ᵢ) = (∏ᵢ *f*(*O*ᵢ))² = 1. <br>
+So in one case we obtain as a result -1 while in the other, we can't ever obtain
+anything but 1.
 
 As you may have picked up, not all experiments similar to the one shown in Fig. 1
-can show this contextual behavior, the operators and series of measurements have
-to be carefully chosen.
+can exhibit this contextual behavior, the operators and series of measurements
+have to be carefully chosen.
 
 ## 4. Link with quantum programs verification
 
-Program verification is a concept that stems as early as from the
-beginning of computer science. For instance, Hoare logic \[Hoa69\]
-was introduced in 1969 where the now very famous C language was
-introduced in 1972! The idea behind program verification is to *prove*
-that the program written by the programmer does what is was conceived to
-do. This proof is possible because a program is in fact nothing but a
-series of logical instructions, so it can in fact be translated as a
+Program verification is a concept that stems as early as from the beginning of
+computer science. For instance, Hoare logic \[Hoa69\] was introduced in 1969
+where the now very famous C language was introduced in 1972! The idea behind
+program verification is to *prove* that the program written by the programmer
+does what it was conceived to do. This proof is possible because a program is in
+fact nothing but a series of logical instructions, so it can be translated as a
 series of applications of a (mathematical) function to a certain variable
-encoding the state of the system. The proof is then to show that the
-output variable validates the condition imposed by the programmer, given
-the input variable. Let us take a small example to explore this concept:
+encoding the state of the system. The proof is then to show that the output
+variable validates the condition imposed by the programmer, given the input
+variable. Let us take a small example to explore this concept:
 
     $f_1$(x) = x+1; $f_2$(x) = 2x
 
@@ -194,7 +194,7 @@ properties, even if (as of now) it wasn’t used in this context.
 
 ## At ColibrITD
 
-At *colibrITD*, we create programs that efficiently solve our costumers’
+At *ColibrITD*, we create programs that efficiently solve our costumers’
 industrial problems. Since we target industrial problems, bugs can be
 very costly, so having tools to automate the verification of our quantum
 programs is precious for us!
