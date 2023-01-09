@@ -17,15 +17,15 @@ status: draft
 
 # Contextuality in quantum computing
 
-Quantum Mechanics is know as a counterintuitive field, where things seen as
+Quantum Mechanics is known as a counterintuitive field, where things seen as
 impossible in our day-to-day life are perfectly normal. The two examples
 commonly given when mentioning this counter intuitive aspect of quantum
-mechanics is mentioned are the superposition (the fact that Schrödinger’s cat is
-both dead and alive as long as its box isn’t opened \[Sch35\]) and entanglement
-(the fact that two particles can be in a state where acting on one of them would
-seemingly immediately have an effect of the other, such as measuring one of the
-qubits of the Bell state \[EPR35\]). Other properties, such as the destructive nature
-of the quantum measure (also related to Schrödinger’s cat thought experiment), can
+mechanics are the superposition (the fact that Schrödinger’s cat is both dead
+and alive as long as its box isn’t opened \[Sch35\]) and entanglement(the fact
+that two particles can be in a state where acting on one of them would seemingly
+immediately have an effect of the other, such as measuring one of the qubits of
+the Bell state \[EPR35\]). Other properties, such as the destructive nature of
+the quantum measure (also related to Schrödinger’s cat thought experiment), can
 be mentioned, but today, I will present you a property that is less popular, but
 as disconcerting the first time you cross its path: the *contextuality*!
 
@@ -34,32 +34,33 @@ entanglement) as explored in \[AB11\] and to hidden variable theories, but we wi
 focus here on a fresh look on the subject by trying to start from an easy to
 grasp common ground, and introducing only strictly necessary notion as we go.
 
-So! We call a situation contextual when its actors need a knowledge of the
+So! We call a situation contextual when its protagonists need a knowledge of the
 context in order to explain the aftermath of the situation. And we also need to
-restrict the ability of the actors to only perform *local* actions (no faster
-than light communication). Given this, let us examine a case where we would like
-to see if the situation is contextual or not.
+restrict the ability of the protagonists to only perform *local* actions
+(no faster than light communication). Given this, let us examine a case where we
+would like to see if the situation is contextual or not.
 
 <figure>
 <img src="resources/medium.png" style="height:6cm"
-alt="A medium, as dreamed by DALL·E 2" />
-<figcaption aria-hidden="true">A medium, as dreamed by DALL·E 2</figcaption>
+alt="A fortune teller, as dreamed by DALL·E 2" />
+<figcaption aria-hidden="true">A fortune teller, as dreamed by DALL·E 2</figcaption>
 </figure>
 
 Let us say that we are very worried about a loved one who is at the other end of
 the world, potentially doing dangerous activities. In order to get reassured, we
-go and see a medium which would help us see our loved one and make sure he/she
-is doing OK. The medium welcomes us with a cryptic sentence "Your friend is
-eating your lunch". At this point, you remember that you forgot the lunch you
-just bought on the counter of the kitchen, with your dog (Milly). It seems like
-the medium has a *non local* knowledge of the world: he knows something that
-happened at a distance and this without communication with the remote event.
-This said, you realize that it’s 11:30, you still have your lunch ticket peeking
-out of your pocket, and you have Milly’s hairs on your trousers. These three
-elements are part of the *context* of the current situation, and this is
-probably how the medium guessed what happened (or rather what is happening). So
-in the end the experience you just lived could be explained by a contextual
-explanation of the event, and the medium has likely no non local abilities.
+go and see a fortune teller which would help us see our loved one and make sure
+he/she is doing OK. The fortune teller welcomes us with a cryptic sentence "Your
+friend is eating your lunch". At this point, you remember that you forgot the
+lunch you just bought on the counter of the kitchen, with your dog (Milly). It
+seems like the fortune teller has a *non local* knowledge of the world: he knows
+something that happened at a distance and this without communication with the
+remote event. This said, you realize that it’s 11:30, you still have your lunch
+ticket peeking out of your pocket, and you have Milly’s hairs on your trousers.
+These three elements are part of the *context* of the current situation, and
+this is probably how the fortune teller guessed what happened (or rather what is
+happening). So in the end the experience you just lived could be explained by a
+contextual explanation of the event, and the fortune teller has likely no non
+local abilities.
 
 ## 1. Formal definition
 
@@ -70,21 +71,17 @@ $$X = \begin{pmatrix}  0 & 1\\  1 & 0\end{pmatrix},Y = \begin{pmatrix}  0 &  -i\
 and we will also use the 2 by 2 identity matrix *I* and the *n* by *n*
 matrix *Id*.
 
-We consider a thought experiment where we perform operations on a *n*
-qubits system, and I will show you that this thought experiment exhibits
-a contextual behavior. The experiment is composed of several series of
-measurements using the operators of the Pauli group. These operators are
-defined as a Pauli measurement on each wire, with eventually a global
-phase. They are denoted
+We consider a thought experiment where we perform operations on a *n* qubits
+system, and I will show you that this thought experiment exhibits a contextual
+behavior. The experiment is composed of several series of measurements using the
+operators of the Pauli group. These operators are defined as a Pauli measurement
+on each wire, with eventually a global phase. They are denoted by
 $$\mathcal{O} = s\bigotimes_{i=0}^n P_i$$
-with *s* ∈ {±1, ±*i*} and *P*ᵢ ∈ {*X*, *Y*, *Z*, *I*}.
-The result of such measurements is in ±1, and the overall result of
-the experiment is the product of all measurement result. I will show you
-in Sec.
-<a href="#sec:link_with_finite_geometries" data-reference-type="ref"
-data-reference="sec:link_with_finite_geometries">3</a> that we can
-construct such experiments where quantum theory can produce a
-result non reproducible by classical, non contextual theory.
+with *s* ∈ {±1, ±*i*} and *P*ᵢ ∈ {*X*, *Y*, *Z*, *I*}. The result of such
+measurements is in ±1, and the overall result of the experiment is the product
+of all measurement results. I will show you in Sec. 3 that we can construct such
+experiments where the quantum theory can produce a result non reproducible by any
+classical, non contextual theory.
 
 ## 2. Link with other quantum specific properties
 
@@ -100,7 +97,7 @@ contextual behaviors).
 
 Understanding the links between these properties may help us build an intuition
 concerning quantum computation. This is likely one of the reasons why they are
-so studied! In that regard, let us have a look at one of the papers reveling on
+so studied! In that regard, let us have a look at one of the papers revealing on
 of the deepest links in my opinion: the 2011 paper by S. Abramsky and A.
 Brandenburger \[AB11\].
 
@@ -113,13 +110,11 @@ associated measurement results.
 
 ## 3. Link with finite geometries
 
-As teased in Sec. <a href="#sec:formal_definition" data-reference-type="ref"
-data-reference="sec:formal_definition">1</a>, this contextuality property can be
-exhibited using measures on a *n* qubits system. The corresponding thought
-experiment is decomposed as such: on this *n* qubits system, we will perform
-several series of measurements. If we represent each operator used for a
-measurement by a dot, and each series of measurement by a line, we obtain what
-we call a finite geometry.
+As teased in Sec. 1, this contextuality property can be exhibited using measures
+on a *n* qubit system. The corresponding thought experiment is decomposed as
+such: on this *n* qubit system, we will perform several series of measurements.
+If we represent each operator used for a measurement by a dot, and each series
+of measurement by a line, we obtain what we call a finite geometry.
 
 This formalism can be complexified such that the finite geometry would live in a
 vector space, and this allows us to perform interesting operations on those
@@ -132,11 +127,10 @@ alt="The Mermin square" />
 <figcaption aria-hidden="true">The Mermin square</figcaption>
 </figure>
 
-Fig. <a href="#fig:mermin-square" data-reference-type="ref"
-data-reference="fig:mermin-square">1</a> represent such an experiment, where the
-operator used are the points and the series of measurement are the lines
-(vertical and horizontal) of this figure. Note that the last vertical line is
-doubled, we will see shortly why that is.
+Fig. 1 represents such an experiment, where the (2 qubits) operators used are the
+points and the series of measurement are the lines(vertical and horizontal) of
+this figure. Note that the last vertical line is doubled, we will see shortly
+why that is.
 
 First, let us check what the result of this experiment will be. Each operator
 here has its eigenvalues in ±1, meaning each result of a single measurement will
@@ -152,17 +146,16 @@ doubled line mentioned earlier comes into play: it is the only one where the
 product of the result is −1. This means that the overall product is −1 and this
 result cannot be reproduced by classical non contextual local theories!
 
-Such a theory (non contextual and local) can be modeled by a function
-that would attribute to each point a value in ±1 (the result of the
-"measurement"). Each point being in two lines, the product of all
-measurements would in this case look like <br>
-∏ᵢ *f*(*O*ᵢ)×∏ᵢ *f*(*O*ᵢ) = (∏ᵢ *f*(*O*ᵢ))² = 1.
+The reason why this result cannot be reproduced by classical non contextual local
+theories is that uch a theory can be modeled by a function that would attribute
+to each point a value in ±1 (the result of the "measurement"). Each point being
+in two lines, the product of all measurements would in this case look like <br>
+∏ᵢ *f*(*O*ᵢ)×∏ᵢ *f*(*O*ᵢ) = (∏ᵢ *f*(*O*ᵢ))² = 1. So in one case we obtain as a 
+result -1 while in the other, can can't ever obtain anything but 1.
 
-As you may have picked up, not all experiments similar to the one shown
-in Fig. <a href="#fig:mermin-square" data-reference-type="ref"
-data-reference="fig:mermin-square">1</a> can show this contextual
-behavior, the operators and series of measurements have to be carefully
-chose.
+As you may have picked up, not all experiments similar to the one shown in Fig. 1
+can show this contextual behavior, the operators and series of measurements have
+to be carefully chosen.
 
 ## 4. Link with quantum programs verification
 
@@ -172,8 +165,8 @@ was introduced in 1969 where the now very famous C language was
 introduced in 1972! The idea behind program verification is to *prove*
 that the program written by the programmer does what is was conceived to
 do. This proof is possible because a program is in fact nothing but a
-series of logical instruction, so it can in fact be translated as a
-series of application of a (mathematical) function to a certain variable
+series of logical instructions, so it can in fact be translated as a
+series of applications of a (mathematical) function to a certain variable
 encoding the state of the system. The proof is then to show that the
 output variable validates the condition imposed by the programmer, given
 the input variable. Let us take a small example to explore this concept:
